@@ -1,0 +1,2 @@
+const CHANGE_FILTER = 'CHANGE_FILTER';
+export default CHANGE_FILTER;
