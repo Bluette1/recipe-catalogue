@@ -4,24 +4,23 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { changeFilter } from '../actions/index';
 
-const categories = list => {
-  const categoryList = [];
-  list.forEach(category => {
-    categoryList.push(category.strCategory);
-  });
-  return categoryList;
-};
 const CategoryFilter = ({ handleFilterChange }) => {
-  const [data, setData] = useState({ mealCategories: [] });
+  const [data, setData] = useState([]);
 
-  useEffect(async () => {
-    const result = await axios(
-      'https://www.themealdb.com/api/json/v1/1/categories.php',
-    );
+  useEffect(() => {
+    axios.get('https://www.themealdb.com/api/json/v1/1/categories.php')
+      .then(response => {
+        const list = response.data.categories;
+        const categoryList = [];
+        list.forEach(category => {
+          categoryList.push(category.strCategory);
+        });
 
-    setData(categories(result.data));
+        setData(categoryList);
+      });
   });
-  const mealCategories = ['All', ...data.mealCategories];
+
+  const mealCategories = ['All', ...data];
   return (
     <div className="category-filter">
       <select

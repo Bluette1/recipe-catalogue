@@ -11,7 +11,7 @@ class MealsList extends React.Component {
     axios.get('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
       .then(response => {
         const { props: { registerMeals } } = this;
-        registerMeals(response.data);
+        registerMeals(response.data.meals);
       });
   }
 
@@ -20,7 +20,7 @@ class MealsList extends React.Component {
     return (
       <div>
         {meals && meals.length ? (
-          meals.map(meal => <Meal key={`meal-${meal.id}`} meal={meal} />)
+          meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} />)
         ) : null}
       </div>
     );
@@ -29,7 +29,8 @@ class MealsList extends React.Component {
 
 const mapStateToProps = state => {
   const { filter } = state;
-  const meals = getMealsByFilter(state, filter);
+  const objectState = getMealsByFilter(state, filter);
+  const { meals } = objectState;
   return { meals };
 };
 
