@@ -28,10 +28,9 @@ class MealsList extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { filter } = state;
-  const objectState = getMealsByFilter(state, filter);
-  const { meals } = objectState;
-  return { meals };
+  const { filter, meals } = state;
+  const mealsFiltered = getMealsByFilter(meals, filter);
+  return { meals: mealsFiltered };
 };
 
 MealsList.propTypes = {
