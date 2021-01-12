@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../MealDetails.css';
+import '../css/MealsDetails.css';
 
 const MealDetails = ({
   title, category, imageUrl, ingredients, instructions,

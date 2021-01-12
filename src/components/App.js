@@ -1,4 +1,4 @@
-import './App.css';
+import '../css/App.css';
 import React from 'react';
 import MealsList from '../containers/MealsList';
 import CategoryFilter from './CategoryFilter';
