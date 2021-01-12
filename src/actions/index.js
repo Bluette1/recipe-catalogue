@@ -1,8 +1,11 @@
-import { CHANGE_FILTER } from './actionTypes';
+import { CHANGE_FILTER, REGISTER_MEALS } from './actionTypes';
 
-const changeFilter = filter => ({
+export const changeFilter = filter => ({
   type: CHANGE_FILTER,
   filter,
 });
 
-export default changeFilter;
+export const registerMeals = meals => ({
+  type: REGISTER_MEALS,
+  meals,
+});

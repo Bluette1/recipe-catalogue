@@ -1,2 +1,2 @@
-const CHANGE_FILTER = 'CHANGE_FILTER';
-export default CHANGE_FILTER;
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+export const REGISTER_MEALS = 'REGISTER_MEALS';
