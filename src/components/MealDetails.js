@@ -10,7 +10,7 @@ const MealDetails = props => {
     img, t, c, i, st, y, ins,
   } = parsedParams;
   return (
-    <div>
+    <div className="details-bg">
       <div className="header">
         <ul className="mealslist-heading">
           <li>

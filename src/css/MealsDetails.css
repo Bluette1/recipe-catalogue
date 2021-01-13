@@ -22,7 +22,7 @@
 }
 
 .meal-row.ins {
-  height: 250px;
+  height: 500px;
 }
 
 .ins-heading {
@@ -32,4 +32,8 @@
 
 .body-ins {
   font-family: 'Milonga', cursive;
+}
+
+.details-bg {
+  background-color: #000;
 }

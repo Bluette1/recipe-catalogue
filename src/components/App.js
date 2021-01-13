@@ -9,7 +9,7 @@ export default function App() {
       <div className="header">
         <ul className="mealslist-heading">
           <li>
-            Recipe catalogue
+            Recipe Catalogue
           </li>
           <a href="/"><button type="button"> Meals</button></a>
           <CategoryFilter />

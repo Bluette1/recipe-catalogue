@@ -28,6 +28,7 @@ ul {
   width: 140px;
   padding-left: 3px;
   font-weight: bold;
+  background-color: #d57d1f;
 }
 
 .mealslist-heading li:first-child {
@@ -52,11 +53,11 @@ ul {
   padding-left: 60px;
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 18px;
-  background-color: #fff;
+  background-color: #d57d1f;
 }
 
 .content {
-  background-color: #faf8f8;
+  background-color: #000;
   margin-top: -35px;
 }
 
