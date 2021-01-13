@@ -11,10 +11,9 @@ export default function App() {
           <li>
             Recipe catalogue
           </li>
-          <li>Meals</li>
+          <a href="/"><button type="button"> Meals</button></a>
           <CategoryFilter />
         </ul>
-        <i className="fas fa-user-circle fa-3x" aria-hidden="true" />
       </div>
       <div>
         <MealsList />

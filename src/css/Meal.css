@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Milonga&family=Mountains+of+Christmas&display=swap');
+
 .meal-row {
   height: 170px;
   padding: 32px 119px 26px 27px;
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-right: 100px;
   margin-left: 100px;
   border-radius: 4px;
@@ -11,31 +15,51 @@
   background-color: #fff;
 }
 
-.category {
-  width: 49px;
+button.hide, button.details {
+  width: 143px;
   height: 18px;
-  margin: 0 39px 0 0;
+  font-family: 'Elsie', cursive;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff; 
+  width: 184px;
+  height: 33px;
+  margin: 12px 0 9px 59px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  background-color: #2d2013;
+  border: #2d2013;
+  cursor: pointer;
+}
+
+.title-category, .image-area .right {
+ width: 250px;
+  
+}
+
+.image-area {
+  height: 150px;
+  width: 150px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tags {
+  margin-left: 53px;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Milonga', cursive;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #121212;
-}
-
-.title {
-  width: 197px;
-  height: 29px;
-  margin: 3px 323px 0 0;
-  font-family: 'Roboto Slab', serif;
-  font-size: 22px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.2px;
   color: #121212;
 }

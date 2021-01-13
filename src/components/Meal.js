@@ -31,14 +31,28 @@ const Meal = ({
         <p className="area category">{strArea}</p>
         <h4 className="title">{strMeal}</h4>
       </div>
-      <div className="image">
-        <div className="image-area">
-          <img src={strMealThumb} alt="meal" />
+      <div>
+        <div
+          className="image-area"
+          style={{
+            backgroundImage: `url(${strMealThumb})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: '0% 0%',
+            backgroundSize: 'cover',
+          }}
+        >
+          {' '}
         </div>
       </div>
-      <h4>{strTags}</h4>
-      <a href={detailsUrl()}>View details</a>
-      <button type="button" onClick={() => hideFromList(idMeal)}>Hide from list</button>
+      <div className="right">
+        <h4 className="tags">
+          Tags:&nbsp;
+          {strTags}
+        </h4>
+        <a href={detailsUrl()}><button type="button" className="details">View details</button></a>
+        <button type="button" className="hide" onClick={() => hideFromList(idMeal)}>Hide from list</button>
+      </div>
+
     </div>
   );
 };
