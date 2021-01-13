@@ -6,14 +6,30 @@ const Meal = ({
   meal,
 }) => {
   const {
-    strMeal, strCategory, strMealThumb, strTags,
+    strMeal, strCategory, strMealThumb, strTags, strArea, strYoutube, strInstructions,
   } = meal;
+
+  const ingredients = () => {
+    let ingredientsStr = '';
+    const keys = Object.keys(meal);
+    for (let idx = 0; idx < keys.length; idx += 1) {
+      if (keys[idx].includes('strIngredient') && meal[keys[idx]] !== null && meal[keys[idx]] !== '') {
+        const num = keys[idx].slice(-1);
+        ingredientsStr += `${meal[keys[idx]]}: ${meal[`strMeasure${num}`]}\n`;
+      }
+    }
+    return ingredientsStr;
+  };
+
+  const detailsUrl = () => `/details?img=${strMealThumb}&t=${strMeal}&c=${strCategory}
+  &i=${ingredients()}&st=${strArea}&y=${strYoutube}&ins=${strInstructions}`;
 
   return (
     <div className="meal-row">
       <div className="title-category">
-        <p className="category">{strMeal}</p>
-        <h4 className="title">{strCategory}</h4>
+        <p className="category">{strCategory}</p>
+        <p className="area category">{strArea}</p>
+        <h4 className="title">{strMeal}</h4>
       </div>
       <div className="image">
         <div className="image-area">
@@ -21,6 +37,7 @@ const Meal = ({
         </div>
       </div>
       <h4>{strTags}</h4>
+      <a href={detailsUrl()}>View details</a>
     </div>
   );
 };
