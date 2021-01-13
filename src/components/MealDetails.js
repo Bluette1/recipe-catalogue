@@ -21,8 +21,7 @@ const MealDetails = props => {
             backgroundPosition: '0% 0%',
             backgroundSize: 'cover',
           }}
-        >
-        </div>
+        />
       </div>
       <div className="meal-row details-pg">
         <div className="title-category">
@@ -40,8 +39,8 @@ const MealDetails = props => {
       <div className="meal-row ins">
         <div>
           <div className="ins-heading">
-          <h4 className="instructions">Instructions:</h4>
-          <a href={y}><button type="button">Youtube Video</button></a>
+            <h4 className="instructions">Instructions:</h4>
+            <a href={y}><button type="button">Youtube Video</button></a>
           </div>
           <p className="body-ins">{ins}</p>
         </div>

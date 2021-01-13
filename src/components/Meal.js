@@ -18,7 +18,6 @@ const Meal = ({
         ingredientsStr += `${meal[keys[idx]]}: ${meal[`strMeasure${num}`]}, `;
       }
     }
-    // text.slice(0, -1)
     const resultIngredientsStr = ingredientsStr.slice(0, -2);
     return resultIngredientsStr;
   };
@@ -39,7 +38,7 @@ const Meal = ({
           style={{
             backgroundImage: `url(${strMealThumb})`,
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: '0% 0%',
+            backgroundPosition: '50% 50%',
             backgroundSize: 'cover',
           }}
         >
