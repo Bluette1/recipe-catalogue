@@ -11,6 +11,14 @@ const MealDetails = props => {
   } = parsedParams;
   return (
     <div>
+      <div className="header">
+        <ul className="mealslist-heading">
+          <li>
+            Recipe catalogue
+          </li>
+          <a href="/"><button type="button">Back</button></a>
+        </ul>
+      </div>
       {' '}
       <div className="image details-pg">
         <div
