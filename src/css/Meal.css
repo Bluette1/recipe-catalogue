@@ -15,9 +15,37 @@
   background-color: #fff;
 }
 
-button.hide, button.details {
-  width: 143px;
+.category {
+  width: 49px;
   height: 18px;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-family: 'Milonga', cursive;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 197px;
+  height: 29px;
+  margin: 3px 323px 0 0;
+  font-family: 'Elsie', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+button.hide,
+button.details {
   font-family: 'Elsie', cursive;
   font-size: 13px;
   font-weight: 300;
@@ -26,7 +54,7 @@ button.hide, button.details {
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
-  color: #fff; 
+  color: #fff;
   width: 184px;
   height: 33px;
   margin: 12px 0 9px 59px;
@@ -37,9 +65,9 @@ button.hide, button.details {
   cursor: pointer;
 }
 
-.title-category, .image-area .right {
- width: 250px;
-  
+.title-category,
+.image-area .right {
+  width: 250px;
 }
 
 .image-area {

@@ -15,10 +15,12 @@ const Meal = ({
     for (let idx = 0; idx < keys.length; idx += 1) {
       if (keys[idx].includes('strIngredient') && meal[keys[idx]] !== null && meal[keys[idx]] !== '') {
         const num = keys[idx].slice(-1);
-        ingredientsStr += `${meal[keys[idx]]}: ${meal[`strMeasure${num}`]}\n`;
+        ingredientsStr += `${meal[keys[idx]]}: ${meal[`strMeasure${num}`]}, `;
       }
     }
-    return ingredientsStr;
+    // text.slice(0, -1)
+    const resultIngredientsStr = ingredientsStr.slice(0, -2);
+    return resultIngredientsStr;
   };
 
   const detailsUrl = () => `/details?img=${strMealThumb}&t=${strMeal}&c=${strCategory}

@@ -6,9 +6,7 @@ ul {
   display: flex;
   list-style: none;
 }
-.header {
-  margin-top: 5%;
-}
+
 .mealslist-heading li,
 .mealslist-heading select {
   padding-right: 10px;
@@ -29,6 +27,7 @@ ul {
 .mealslist-heading select {
   width: 140px;
   padding-left: 3px;
+  font-weight: bold;
 }
 
 .mealslist-heading li:first-child {
@@ -46,6 +45,7 @@ ul {
 }
 
 .header {
+  margin-top: 5%;
   display: flex;
   justify-content: space-between;
   padding-right: 100px;
@@ -60,10 +60,8 @@ ul {
   margin-top: -35px;
 }
 
-
 button {
   width: 160px;
-  height: 18px;
   font-family: 'Elsie', cursive;
   font-size: 13px;
   font-weight: 300;
@@ -72,7 +70,7 @@ button {
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
-  color: #fff; 
+  color: #fff;
   height: 33px;
   margin-left: -80px;
   margin-right: 190px;
@@ -80,8 +78,5 @@ button {
   border-radius: 3px;
   background-color: #2d2013;
   border: #2d2013;
+  cursor: pointer;
 }
-
-
-
-

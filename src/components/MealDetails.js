@@ -12,32 +12,38 @@ const MealDetails = props => {
   return (
     <div>
       {' '}
-      <div className="image">
-        <div className="image-area">
-          <img src={img} alt="meal" />
+      <div className="image details-pg">
+        <div
+          className="image-area details-pg"
+          style={{
+            backgroundImage: `url(${img})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: '0% 0%',
+            backgroundSize: 'cover',
+          }}
+        >
         </div>
-        <div className="meal-row">
-          <div className="title-category">
-            <p className="category">{c}</p>
-            <p className="area category">{st}</p>
-            <h4 className="title">{t}</h4>
+      </div>
+      <div className="meal-row details-pg">
+        <div className="title-category">
+          <p className="category">{c}</p>
+          <p className="area category">{st}</p>
+          <h4 className="title">{t}</h4>
+        </div>
+        <div>
+          <h4>
+            Ingredients:
+            {i}
+          </h4>
+        </div>
+      </div>
+      <div className="meal-row ins">
+        <div>
+          <div className="ins-heading">
+          <h4 className="instructions">Instructions:</h4>
+          <a href={y}><button type="button">Youtube Video</button></a>
           </div>
-          <div>
-            <h4>
-              Ingredients:
-              {i}
-            </h4>
-          </div>
-          <div>
-            <p>
-              Instructions:
-              {ins}
-            </p>
-            <p>
-              Youtube Video:
-              {y}
-            </p>
-          </div>
+          <p className="body-ins">{ins}</p>
         </div>
       </div>
     </div>

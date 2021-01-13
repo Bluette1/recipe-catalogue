@@ -2,44 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie&family=Mountains+of+Christmas&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Elsie&family=Milonga&family=Mountains+of+Christmas&display=swap');
 
-.meal-row {
-  height: 170px;
-  padding: 32px 119px 26px 27px;
-  margin-top: 40px;
+.image.details-pg {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.image-area.details-pg {
+  height: 300px;
+  width: 300px;
+}
+
+.instructions {
+  font-family: 'Milonga', cursive;
+}
+
+.meal-row.details-pg {
+  height: 100px;
+}
+
+.meal-row.ins {
+  height: 250px;
+}
+
+.ins-heading {
   display: flex;
   justify-content: space-between;
-  margin-right: 100px;
-  margin-left: 100px;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #fff;
 }
 
-.category {
-  width: 49px;
-  height: 18px;
-  margin: 0 39px 0 0;
-  opacity: 0.5;
+.body-ins {
   font-family: 'Milonga', cursive;
-  font-size: 14px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #121212;
-}
-
-.title {
-  width: 197px;
-  height: 29px;
-  margin: 3px 323px 0 0;
-  font-family: 'Elsie', cursive; 
-  font-size: 22px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.2px;
-  color: #121212;
 }
