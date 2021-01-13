@@ -11,7 +11,7 @@ const Routes = () => (
   <ConnectedRouter history={history}>
     <Switch>
       <Route exact path="/details" component={Details} />
-      <Route exact path="/:id" component={App} />
+      <Route exact path="/search" component={App} />
       <Route exact path="/" component={ListByAlphabet} />
       <Route component={NotFound} />
     </Switch>
