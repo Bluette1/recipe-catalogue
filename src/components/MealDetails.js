@@ -45,10 +45,6 @@ const MealDetails = props => {
 };
 
 MealDetails.propTypes = {
-//   category: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-//   imageUrl: PropTypes.string.isRequired,
-//   ingredients: PropTypes.string.isRequired,
   location: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {
+  HIDE_MEAL,
   REGISTER_MEALS,
 } from '../actions/actionTypes';
 
@@ -11,6 +12,12 @@ export default function meals(state = initialState, action) {
       return [
         ..._.cloneDeep(state), ...action.meals,
       ];
+    }
+
+    case HIDE_MEAL: {
+      const { id } = action;
+      const meals = [..._.cloneDeep(state)];
+      return meals.filter(meal => meal.idMeal !== id);
     }
     default:
       return state;

@@ -6,9 +6,14 @@ import axios from 'axios';
 import QueryString from 'query-string';
 import Meal from '../components/Meal';
 import getMealsByFilter from '../selectors';
-import { registerMeals } from '../actions/index';
+import { registerMeals, hideMeal } from '../actions/index';
 
 class MealsList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.hideThisMeal = this.hideThisMeal.bind(this);
+  }
+
   componentDidMount() {
     const { props: { registerMeals, location: { search } } } = this;
     const parsedParams = QueryString.parse(search);
@@ -19,12 +24,17 @@ class MealsList extends React.Component {
       });
   }
 
+  hideThisMeal(id) {
+    const { props: { hideMeal } } = this;
+    hideMeal(id);
+  }
+
   render() {
     const { props: { meals } } = this;
     return (
       <div>
         {meals && meals.length ? (
-          meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} />)
+          meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} hideFromList={this.hideThisMeal} />)
         ) : null}
       </div>
     );
@@ -40,7 +50,8 @@ const mapStateToProps = state => {
 MealsList.propTypes = {
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
   registerMeals: PropTypes.func.isRequired,
+  hideMeal: PropTypes.func.isRequired,
   location: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
-export default withRouter(connect(mapStateToProps, { registerMeals })(MealsList));
+export default withRouter(connect(mapStateToProps, { registerMeals, hideMeal })(MealsList));

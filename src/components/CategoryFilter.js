@@ -15,7 +15,6 @@ const CategoryFilter = ({ handleFilterChange }) => {
         list.forEach(category => {
           categoryList.push(category.strCategory);
         });
-
         setData(categoryList);
       });
   });

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import '../css/Meal.css';
 
 const Meal = ({
-  meal,
+  meal, hideFromList,
 }) => {
   const {
-    strMeal, strCategory, strMealThumb, strTags, strArea, strYoutube, strInstructions,
+    strMeal, strCategory, strMealThumb, strTags, strArea, strYoutube, strInstructions, idMeal,
   } = meal;
 
   const ingredients = () => {
@@ -38,10 +38,14 @@ const Meal = ({
       </div>
       <h4>{strTags}</h4>
       <a href={detailsUrl()}>View details</a>
+      <button type="button" onClick={() => hideFromList(idMeal)}>Hide from list</button>
     </div>
   );
 };
 
-Meal.propTypes = { meal: PropTypes.objectOf(PropTypes.string).isRequired };
+Meal.propTypes = {
+  meal: PropTypes.objectOf(PropTypes.string).isRequired,
+  hideFromList: PropTypes.func.isRequired,
+};
 
 export default Meal;
