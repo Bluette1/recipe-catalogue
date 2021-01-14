@@ -39,7 +39,7 @@ const MealDetails = props => {
         </div>
         <div>
           <h4>
-            Ingredients:
+            Ingredients:&nbsp;
             {i}
           </h4>
         </div>

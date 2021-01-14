@@ -78,6 +78,8 @@ it('renders the app with expected component -test with enzyme', async () => {
   });
   await waitFor(() => {
     expect(app.find('button').text()).toBe('Meals');
+    const link = app.find('a').get(0);
+    expect(link.props.href).toBe('/');
     expect(app.find('.header')).toBeDefined();
   });
 });
