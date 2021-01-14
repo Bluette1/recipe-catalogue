@@ -144,3 +144,5 @@ Object {
   "unmount": [Function],
 }
 `;
+
+exports[`renders the app with expected component -test with enzyme 1`] = `ReactWrapper {}`;

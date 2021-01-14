@@ -81,5 +81,6 @@ it('renders the app with expected component -test with enzyme', async () => {
     const link = app.find('a').get(0);
     expect(link.props.href).toBe('/');
     expect(app.find('.header')).toBeDefined();
+    expect(app).toMatchSnapshot();
   });
 });
