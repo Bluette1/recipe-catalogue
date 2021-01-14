@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# recipe-catalogue
+![Linters](https://github.com/bluette1/recipe-catalogue/Linters/badge.svg)
+
+![Test with jest](https://github.com/Bluette1/recipe-catalogue/workflows/Test%20with%20jest/badge.svg)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
