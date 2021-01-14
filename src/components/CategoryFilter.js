@@ -17,7 +17,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
         });
         setData(categoryList);
       });
-  });
+  }, []);
 
   const mealCategories = ['All', ...data];
   return (

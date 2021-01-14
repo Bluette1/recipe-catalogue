@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent, act } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent, act, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { configure, mount } from 'enzyme';
@@ -23,36 +23,59 @@ const AppWithStore = () => (
     </React.StrictMode>
   </Provider>
 );
-test('renders the app', () => {
-  axios.get.mockResolvedValue({
-    data: { meals: [] },
-  });
+test('renders the app', async () => {
+  axios.get.mockImplementation((url) => {
+    switch (url) {
+      case 'https://www.themealdb.com/api/json/v1/1/categories.php':
+        return Promise.resolve({data: {categories: []}});
+      default:
+        return Promise.resolve({data: {meals: []}});
+    }
+  })
   render(<AppWithStore />);
-  const catalogueTitle = screen.getByText(/Recipe Catalogue/i);
-  expect(catalogueTitle).toBeInTheDocument();
+  await waitFor(() => {
+    const catalogueTitle = screen.getByText(/Recipe Catalogue/i);
+    expect(catalogueTitle).toBeInTheDocument();
+  });
 });
 
-it('renders app with home button component', () => {
-  axios.get.mockResolvedValue({
-    data: { meals: [] },
-  });
+it('renders app with home button component', async () => {
+  axios.get.mockImplementation((url) => {
+    switch (url) {
+      case 'https://www.themealdb.com/api/json/v1/1/categories.php':
+        return Promise.resolve({data: {categories: []}});
+      default:
+        return Promise.resolve({data: {meals: []}});
+    }
+  })
   const div = document.createElement('div');
   const rendered = render(<AppWithStore />, div);
-  const homeButton = rendered.getByText('Meals');
-  fireEvent.click(homeButton);
-  expect(homeButton).toBeDefined();
-  expect(rendered).toMatchSnapshot();
+  await waitFor(() => {
+    const homeButton = rendered.getByText('Meals');
+    fireEvent.click(homeButton);
+    expect(homeButton).toBeDefined();
+    expect(rendered).toMatchSnapshot();
+  });
 });
 
-it('renders the app with expected display component', () => {
+it('renders the app with expected component -test with enzyme', async () => {
   axios.get.mockResolvedValue({
     data: { meals: [] },
+  });
+  axios.get.mockImplementation((url) => {
+    switch (url) {
+      case 'https://www.themealdb.com/api/json/v1/1/categories.php':
+        return Promise.resolve({data: {categories: []}});
+      default:
+        return Promise.resolve({data: {meals: []}});
+    }
   });
   let app;
   act(() => {
-    /* fire events that update state */
     app = mount(<AppWithStore />);
   });
-  expect(app.find('button').text()).toBe('Meals');
-  expect(app.find('.header')).toBeDefined();
+  await waitFor(() => {
+    expect(app.find('button').text()).toBe('Meals');
+    expect(app.find('.header')).toBeDefined();
+  });
 });
