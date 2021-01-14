@@ -11,7 +11,7 @@ export default function App() {
           <li>
             Recipe Catalogue
           </li>
-          <a href="/"><button type="button"> Meals</button></a>
+          <a href="/"><button type="button">Meals</button></a>
           <CategoryFilter />
         </ul>
       </div>
