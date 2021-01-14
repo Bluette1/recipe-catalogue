@@ -1,12 +1,14 @@
 import React from 'react';
-import { render, screen, cleanup, fireEvent, act, waitFor } from '@testing-library/react';
+import {
+  render, screen, cleanup, fireEvent, act, waitFor,
+} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import axios from 'axios';
 import App from '../components/App';
 import configureStore, { history } from '../store';
-import axios from 'axios';
 
 configure({ adapter: new Adapter() });
 
@@ -24,14 +26,14 @@ const AppWithStore = () => (
   </Provider>
 );
 test('renders the app', async () => {
-  axios.get.mockImplementation((url) => {
+  axios.get.mockImplementation(url => {
     switch (url) {
       case 'https://www.themealdb.com/api/json/v1/1/categories.php':
-        return Promise.resolve({data: {categories: []}});
+        return Promise.resolve({ data: { categories: [] } });
       default:
-        return Promise.resolve({data: {meals: []}});
+        return Promise.resolve({ data: { meals: [] } });
     }
-  })
+  });
   render(<AppWithStore />);
   await waitFor(() => {
     const catalogueTitle = screen.getByText(/Recipe Catalogue/i);
@@ -40,14 +42,14 @@ test('renders the app', async () => {
 });
 
 it('renders app with home button component', async () => {
-  axios.get.mockImplementation((url) => {
+  axios.get.mockImplementation(url => {
     switch (url) {
       case 'https://www.themealdb.com/api/json/v1/1/categories.php':
-        return Promise.resolve({data: {categories: []}});
+        return Promise.resolve({ data: { categories: [] } });
       default:
-        return Promise.resolve({data: {meals: []}});
+        return Promise.resolve({ data: { meals: [] } });
     }
-  })
+  });
   const div = document.createElement('div');
   const rendered = render(<AppWithStore />, div);
   await waitFor(() => {
@@ -62,12 +64,12 @@ it('renders the app with expected component -test with enzyme', async () => {
   axios.get.mockResolvedValue({
     data: { meals: [] },
   });
-  axios.get.mockImplementation((url) => {
+  axios.get.mockImplementation(url => {
     switch (url) {
       case 'https://www.themealdb.com/api/json/v1/1/categories.php':
-        return Promise.resolve({data: {categories: []}});
+        return Promise.resolve({ data: { categories: [] } });
       default:
-        return Promise.resolve({data: {meals: []}});
+        return Promise.resolve({ data: { meals: [] } });
     }
   });
   let app;
