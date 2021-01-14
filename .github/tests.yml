@@ -7,7 +7,7 @@ on:
   push:
     branches: [ feature/add-recipe-catalogue ]
   pull_request:
-    branches: [ feature/add-recipe-catalogue   ]
+    branches: [ feature/add-recipe-catalogue ]
 
 jobs:
   build:
