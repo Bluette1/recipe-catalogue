@@ -4,7 +4,7 @@ import '../css/ListByAlphabet.css';
 
 const ListByAlphapet = () => (
   <div className="list-by-alphabet">
-    <h2>Browse our List of Recipes </h2>
+    <h2>Browse available Recipes </h2>
     <div className="ul">
       <li><a href="/search?f=a">A</a></li>
       <li><a href="/search?f=b">B</a></li>
