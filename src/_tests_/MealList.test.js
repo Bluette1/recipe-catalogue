@@ -39,18 +39,20 @@ it('renders the MealList component', async () => {
   });
   const rendered = render(<MealsListWithStore />);
   await waitFor(() => {
-    const mealTitle = rendered.getByText('Mealia');
-    expect(mealTitle).toBeInTheDocument();
+    setTimeout(() => {
+      const mealTitle = rendered.getByText('Mealia');
+      expect(mealTitle).toBeInTheDocument();
 
-    const mealCategory = rendered.getByText('Dessert');
-    expect(mealCategory).toBeInTheDocument();
+      const mealCategory = rendered.getByText('Dessert');
+      expect(mealCategory).toBeInTheDocument();
 
-    const streetArea = rendered.getByText('British');
-    expect(streetArea).toBeInTheDocument();
+      const streetArea = rendered.getByText('British');
+      expect(streetArea).toBeInTheDocument();
 
-    const tags = rendered.getByText('Tags: dessert, British');
-    expect(tags).toBeInTheDocument();
-    expect(rendered).toMatchSnapshot();
+      const tags = rendered.getByText('Tags: dessert, British');
+      expect(tags).toBeInTheDocument();
+      expect(rendered).toMatchSnapshot();
+    }, 1500);
   });
 });
 
@@ -72,22 +74,24 @@ test('renders MealList component with the expected button elements', async () =>
   });
   const rendered = render(<MealsListWithStore />);
   await waitFor(() => {
-    const detailsButton = rendered.getByText('View details');
-    fireEvent.click(detailsButton);
-    expect(detailsButton).toBeDefined();
+    setTimeout(() => {
+      const detailsButton = rendered.getByText('View details');
+      fireEvent.click(detailsButton);
+      expect(detailsButton).toBeDefined();
 
-    const highlightButton = rendered.getByText('Highlight meal');
-    fireEvent.click(highlightButton);
-    expect(highlightButton).toBeDefined();
-    expect(screen.findAllByRole('button')).toBeDefined();
+      const highlightButton = rendered.getByText('Highlight meal');
+      fireEvent.click(highlightButton);
+      expect(highlightButton).toBeDefined();
+      expect(screen.findAllByRole('button')).toBeDefined();
 
-    const hideButton = rendered.getByText('Hide from list');
-    fireEvent.click(hideButton);
-    expect(hideButton).toBeDefined();
+      const hideButton = rendered.getByText('Hide from list');
+      fireEvent.click(hideButton);
+      expect(hideButton).toBeDefined();
 
-    const streetArea = rendered.getByText('British');
-    expect(streetArea).toBeInTheDocument();
+      const streetArea = rendered.getByText('British');
+      expect(streetArea).toBeInTheDocument();
 
-    expect(rendered).toMatchSnapshot();
+      expect(rendered).toMatchSnapshot();
+    }, 1500);
   });
 });

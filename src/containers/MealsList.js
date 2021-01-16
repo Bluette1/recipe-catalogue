@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
@@ -14,7 +14,12 @@ let letter;
 const MealsList = ({
   meals, registerMeals, highlightMeal, hideMeal, location: { search },
 }) => {
+  const [renderRes, setRenderRes] = useState(false);
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setRenderRes(true);
+    }, 1500);
+
     const parsedParams = QueryString.parse(search);
     const { f } = parsedParams;
     letter = f;
@@ -22,6 +27,7 @@ const MealsList = ({
       .then(response => {
         registerMeals(response.data.meals);
       });
+    return () => clearTimeout(timer);
   }, []);
 
   const highlightThisMeal = id => {
@@ -31,7 +37,8 @@ const MealsList = ({
   const hideThisMeal = id => {
     hideMeal(id);
   };
-  return (
+
+  const result = (
     <div>
       {meals && meals.length ? (
         meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
@@ -46,6 +53,10 @@ const MealsList = ({
         </div>
       )}
     </div>
+  );
+
+  return (
+    <div>{renderRes ? (result) : null}</div>
   );
 };
 
