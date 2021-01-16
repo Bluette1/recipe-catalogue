@@ -79,6 +79,10 @@ test('renders MealList component with the expected button elements', async () =>
     const detailsButton = rendered.getByText('View details');
     fireEvent.click(detailsButton);
     expect(detailsButton).toBeDefined();
+
+    const highlightButton = rendered.getByText('Highlight meal');
+    fireEvent.click(highlightButton);
+    expect(highlightButton).toBeDefined();
     expect(screen.findAllByRole('button')).toBeDefined();
 
     expect(rendered).toMatchSnapshot();

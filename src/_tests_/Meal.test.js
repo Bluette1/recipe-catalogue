@@ -79,3 +79,12 @@ it('renders the Meal component with the `hide meal` button working correctly', (
   expect(hideFromListSpy).toHaveBeenCalledWith(meal.idMeal);
   expect(rendered).toMatchSnapshot();
 });
+
+it('renders the Meal component with the `highlight meal` button working correctly', () => {
+  const rendered = render(<MealWithStore />);
+  const highlightButton = rendered.getByText('Highlight meal');
+  expect(highlightButton).toBeInTheDocument();
+  fireEvent.click(highlightButton);
+  expect(highLightMealSpy).toHaveBeenCalledWith(meal.idMeal);
+  expect(rendered).toMatchSnapshot();
+});

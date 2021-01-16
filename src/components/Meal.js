@@ -59,7 +59,7 @@ const Meal = ({
         </h4>
         <a href={detailsUrl()}><button type="button" className="details">View details</button></a>
         <button type="button" className="hide" onClick={() => hideFromList(idMeal)}>Hide from list</button>
-        <button type="button" className="highlight" onClick={() => highlightMeal(idMeal)}>Highlight Meal</button>
+        <button type="button" className="highlight" onClick={() => highlightMeal(idMeal)}>Highlight meal</button>
       </div>
 
     </div>
