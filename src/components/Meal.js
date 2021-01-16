@@ -23,8 +23,8 @@ const Meal = ({
     return resultIngredientsStr;
   };
 
-  const detailsUrl = () => `/details?img=${strMealThumb}&t=${strMeal}&c=${strCategory}
-  &i=${ingredients()}&st=${strArea}&y=${strYoutube}&ins=${strInstructions}`;
+  const detailsUrl = () => `/details?img=${strMealThumb}&t=${strMeal}
+  &i=${ingredients()}&y=${strYoutube}&ins=${strInstructions}`;
 
   return (
     <div

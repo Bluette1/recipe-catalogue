@@ -72,10 +72,6 @@ test('renders MealList component with the expected button elements', async () =>
   });
   const rendered = render(<MealsListWithStore />);
   await waitFor(() => {
-    const hideButton = rendered.getByText('Hide from list');
-    fireEvent.click(hideButton);
-    expect(hideButton).toBeDefined();
-
     const detailsButton = rendered.getByText('View details');
     fireEvent.click(detailsButton);
     expect(detailsButton).toBeDefined();
@@ -84,6 +80,13 @@ test('renders MealList component with the expected button elements', async () =>
     fireEvent.click(highlightButton);
     expect(highlightButton).toBeDefined();
     expect(screen.findAllByRole('button')).toBeDefined();
+
+    const hideButton = rendered.getByText('Hide from list');
+    fireEvent.click(hideButton);
+    expect(hideButton).toBeDefined();
+
+    const streetArea = rendered.getByText('British');
+    expect(streetArea).toBeInTheDocument();
 
     expect(rendered).toMatchSnapshot();
   });

@@ -65,8 +65,8 @@ it('renders the Meal component with the correct link to the meal details page', 
   const rendered = mount(<MealWithStore />);
   const link = rendered.find('a').get(0);
 
-  const detailsUrl = `/details?img=image-url&t=Mealia&c=Dessert
-  &i=corn: 1 cup&st=British&y=Youtube url&ins=How to Cook Mealia`;
+  const detailsUrl = `/details?img=image-url&t=Mealia
+  &i=corn: 1 cup&y=Youtube url&ins=How to Cook Mealia`;
   expect(link.props.href).toBe(detailsUrl);
   expect(rendered).toMatchSnapshot();
 });

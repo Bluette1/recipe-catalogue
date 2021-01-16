@@ -46,8 +46,8 @@ Object {
               dessert, British
             </h4>
             <a
-              href="/details?img=image-url&t=Mealia&c=Dessert
-  &i=corn: 1 cup&st=British&y=Youtube url&ins=How to Cook Mealia"
+              href="/details?img=image-url&t=Mealia
+  &i=corn: 1 cup&y=Youtube url&ins=How to Cook Mealia"
             >
               <button
                 class="details"
@@ -115,8 +115,8 @@ Object {
             dessert, British
           </h4>
           <a
-            href="/details?img=image-url&t=Mealia&c=Dessert
-  &i=corn: 1 cup&st=British&y=Youtube url&ins=How to Cook Mealia"
+            href="/details?img=image-url&t=Mealia
+  &i=corn: 1 cup&y=Youtube url&ins=How to Cook Mealia"
           >
             <button
               class="details"
@@ -241,8 +241,8 @@ Object {
               dessert, British
             </h4>
             <a
-              href="/details?img=image-url&t=Mealia&c=Dessert
-  &i=corn: 1 cup&st=British&y=Youtube url&ins=How to Cook Mealia"
+              href="/details?img=image-url&t=Mealia
+  &i=corn: 1 cup&y=Youtube url&ins=How to Cook Mealia"
             >
               <button
                 class="details"
@@ -310,8 +310,8 @@ Object {
             dessert, British
           </h4>
           <a
-            href="/details?img=image-url&t=Mealia&c=Dessert
-  &i=corn: 1 cup&st=British&y=Youtube url&ins=How to Cook Mealia"
+            href="/details?img=image-url&t=Mealia
+  &i=corn: 1 cup&y=Youtube url&ins=How to Cook Mealia"
           >
             <button
               class="details"

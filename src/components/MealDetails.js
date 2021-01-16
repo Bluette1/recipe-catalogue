@@ -7,7 +7,7 @@ const MealDetails = props => {
   const { location: { search } } = props;
   const parsedParams = QueryString.parse(search);
   const {
-    img, t, c, i, st, y, ins,
+    img, t, i, y, ins,
   } = parsedParams;
   return (
     <div className="details-bg">
@@ -33,8 +33,6 @@ const MealDetails = props => {
       </div>
       <div className="meal-row details-pg">
         <div className="title-category">
-          <p className="category">{c}</p>
-          <p className="area category">{st}</p>
           <h4 className="title">{t}</h4>
         </div>
         <div>
