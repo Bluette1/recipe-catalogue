@@ -61,6 +61,12 @@ Object {
           >
             Hide from list
           </button>
+          <button
+            class="highlight"
+            type="button"
+          >
+            Highlight Meal
+          </button>
         </div>
       </div>
     </div>
@@ -121,6 +127,12 @@ Object {
           type="button"
         >
           Hide from list
+        </button>
+        <button
+          class="highlight"
+          type="button"
+        >
+          Highlight Meal
         </button>
       </div>
     </div>
@@ -240,6 +252,12 @@ Object {
           >
             Hide from list
           </button>
+          <button
+            class="highlight"
+            type="button"
+          >
+            Highlight Meal
+          </button>
         </div>
       </div>
     </div>
@@ -300,6 +318,12 @@ Object {
           type="button"
         >
           Hide from list
+        </button>
+        <button
+          class="highlight"
+          type="button"
+        >
+          Highlight Meal
         </button>
       </div>
     </div>

@@ -28,12 +28,13 @@ const meal = {
 };
 
 const hideFromListSpy = jest.fn();
+const highLightMealSpy = jest.fn();
 
 const MealWithStore = () => (
   <Provider store={store}>
     <React.StrictMode>
       <ConnectedRouter history={history}>
-        <Meal hideFromList={hideFromListSpy} meal={meal} />
+        <Meal hideFromList={hideFromListSpy} highlightMeal={highLightMealSpy} meal={meal} />
       </ConnectedRouter>
     </React.StrictMode>
   </Provider>

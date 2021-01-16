@@ -10,7 +10,7 @@ const initialState = [];
 const setProperty = (meals, id, key) => {
   const index = meals.findIndex(meal => meal.idMeal === id);
   const highLightedMeal = meals[index];
-  highLightedMeal[key] = true;
+  highLightedMeal[key] = key;
   return [...meals.slice(0, index), highLightedMeal, ...meals.slice(index + 1)];
 };
 

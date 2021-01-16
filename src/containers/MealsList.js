@@ -25,7 +25,6 @@ class MealsList extends React.Component {
     letter = f;
     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${f}`)
       .then(response => {
-        console.log('Meals: ', response.data.meals);
         registerMeals(response.data.meals);
       });
   }

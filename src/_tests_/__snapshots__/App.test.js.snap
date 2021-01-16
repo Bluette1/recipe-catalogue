@@ -43,7 +43,16 @@ Object {
           </ul>
         </div>
         <div>
-          <div />
+          <div>
+            <div>
+              <p
+                class="no-meals"
+              >
+                There are currently no recipes that begin with the letter  
+                .
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -87,7 +96,16 @@ Object {
         </ul>
       </div>
       <div>
-        <div />
+        <div>
+          <div>
+            <p
+              class="no-meals"
+            >
+              There are currently no recipes that begin with the letter  
+              .
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>,
