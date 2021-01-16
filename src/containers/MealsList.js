@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
@@ -11,15 +11,10 @@ import '../css/MealsList.css';
 
 let letter;
 
-class MealsList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.highlightThisMeal = this.highlightThisMeal.bind(this);
-    this.hideThisMeal = this.hideThisMeal.bind(this);
-  }
-
-  componentDidMount() {
-    const { props: { registerMeals, location: { search } } } = this;
+const MealsList = ({
+  meals, registerMeals, highlightMeal, hideMeal, location: { search },
+}) => {
+  useEffect(() => {
     const parsedParams = QueryString.parse(search);
     const { f } = parsedParams;
     letter = f;
@@ -27,38 +22,32 @@ class MealsList extends React.Component {
       .then(response => {
         registerMeals(response.data.meals);
       });
-  }
+  }, []);
 
-  highlightThisMeal(id) {
-    const { props: { highlightMeal } } = this;
+  const highlightThisMeal = id => {
     highlightMeal(id);
-  }
+  };
 
-  hideThisMeal(id) {
-    const { props: { hideMeal } } = this;
+  const hideThisMeal = id => {
     hideMeal(id);
-  }
-
-  render() {
-    const { props: { meals } } = this;
-    return (
-      <div>
-        {meals && meals.length ? (
-          meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={this.highlightThisMeal} hideFromList={this.hideThisMeal} />)
-        ) : (
-          <div>
-            <p className="no-meals">
-              There are currently no recipes that begin with the letter
-              &nbsp;
-              {letter}
-              .
-            </p>
-          </div>
-        )}
-      </div>
-    );
-  }
-}
+  };
+  return (
+    <div>
+      {meals && meals.length ? (
+        meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
+      ) : (
+        <div>
+          <p className="no-meals">
+            There are currently no recipes that begin with the letter
+            &nbsp;
+            {letter}
+            .
+          </p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const mapStateToProps = state => {
   const { filter, meals } = state;
