@@ -9,6 +9,9 @@ const initialState = [];
 export default function meals(state = initialState, action) {
   switch (action.type) {
     case REGISTER_MEALS: {
+      if (!action.meals) {
+        return [..._.cloneDeep(state)];
+      }
       return [
         ..._.cloneDeep(state), ...action.meals,
       ];
