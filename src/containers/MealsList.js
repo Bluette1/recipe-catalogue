@@ -6,7 +6,7 @@ import axios from 'axios';
 import QueryString from 'query-string';
 import Meal from '../components/Meal';
 import getMealsByFilter from '../selectors';
-import { registerMeals, hideMeal } from '../actions/index';
+import { registerMeals, highlightMeal, hideMeal } from '../actions/index';
 import '../css/MealsList.css';
 
 let letter;
@@ -14,6 +14,7 @@ let letter;
 class MealsList extends React.Component {
   constructor(props) {
     super(props);
+    this.highlightThisMeal = this.highlightThisMeal.bind(this);
     this.hideThisMeal = this.hideThisMeal.bind(this);
   }
 
@@ -29,6 +30,11 @@ class MealsList extends React.Component {
       });
   }
 
+  highlightThisMeal(id) {
+    const { props: { highlightMeal } } = this;
+    highlightMeal(id);
+  }
+
   hideThisMeal(id) {
     const { props: { hideMeal } } = this;
     hideMeal(id);
@@ -39,7 +45,7 @@ class MealsList extends React.Component {
     return (
       <div>
         {meals && meals.length ? (
-          meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} hideFromList={this.hideThisMeal} />)
+          meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={this.highlightThisMeal} hideFromList={this.hideThisMeal} />)
         ) : (
           <div>
             <p className="no-meals">
@@ -64,8 +70,12 @@ const mapStateToProps = state => {
 MealsList.propTypes = {
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
   registerMeals: PropTypes.func.isRequired,
+  highlightMeal: PropTypes.func.isRequired,
   hideMeal: PropTypes.func.isRequired,
   location: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
-export default withRouter(connect(mapStateToProps, { registerMeals, hideMeal })(MealsList));
+export default withRouter(connect(
+  mapStateToProps,
+  { registerMeals, highlightMeal, hideMeal },
+)(MealsList));

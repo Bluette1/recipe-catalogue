@@ -1,4 +1,6 @@
-import { CHANGE_FILTER, REGISTER_MEALS, HIDE_MEAL } from './actionTypes';
+import {
+  CHANGE_FILTER, REGISTER_MEALS, HIGHLIGHT_MEAL, HIDE_MEAL,
+} from './actionTypes';
 
 export const changeFilter = filter => ({
   type: CHANGE_FILTER,
@@ -12,5 +14,10 @@ export const registerMeals = meals => ({
 
 export const hideMeal = id => ({
   type: HIDE_MEAL,
+  id,
+});
+
+export const highlightMeal = id => ({
+  type: HIGHLIGHT_MEAL,
   id,
 });

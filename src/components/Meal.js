@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/Meal.css';
+import cx from 'classnames';
 
 const Meal = ({
-  meal, hideFromList,
+  meal, highlightMeal, hideFromList,
 }) => {
   const {
     strMeal, strCategory, strMealThumb, strTags, strArea, strYoutube, strInstructions, idMeal,
@@ -26,7 +27,13 @@ const Meal = ({
   &i=${ingredients()}&st=${strArea}&y=${strYoutube}&ins=${strInstructions}`;
 
   return (
-    <div className="meal-row">
+    <div
+      className={cx(
+        'meal-row',
+        meal.highlight && 'highlighted',
+        meal.hide && 'hidden',
+      )}
+    >
       <div className="title-category">
         <p className="category">{strCategory}</p>
         <p className="area category">{strArea}</p>
@@ -52,6 +59,7 @@ const Meal = ({
         </h4>
         <a href={detailsUrl()}><button type="button" className="details">View details</button></a>
         <button type="button" className="hide" onClick={() => hideFromList(idMeal)}>Hide from list</button>
+        <button type="button" className="highlight" onClick={() => highlightMeal(idMeal)}>Highlight Meal</button>
       </div>
 
     </div>
@@ -60,6 +68,7 @@ const Meal = ({
 
 Meal.propTypes = {
   meal: PropTypes.objectOf(PropTypes.string).isRequired,
+  highlightMeal: PropTypes.func.isRequired,
   hideFromList: PropTypes.func.isRequired,
 };
 
