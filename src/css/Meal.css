@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Milonga&family=Mountains+of+Christmas&display=swap');
+
+.meal-row {
+  height: 170px;
+  padding: 32px 119px 26px 27px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 100px;
+  margin-left: 100px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #d57d1f;
+}
+
+.category {
+  width: 49px;
+  height: 18px;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-family: 'Milonga', cursive;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 197px;
+  height: 29px;
+  margin: 3px 323px 0 0;
+  font-family: 'Elsie', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.title-category,
+.image-area .right {
+  width: 250px;
+}
+
+.image-area {
+  height: 150px;
+  width: 150px;
+  border: solid 3px #2d2013;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tags {
+  margin-left: 53px;
+  opacity: 0.5;
+  font-family: 'Milonga', cursive;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.meal-row button {
+  font-family: 'Elsie', cursive;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  width: 160px;
+  height: 33px;
+  margin: 12px 0 9px 59px;
+  border-radius: 3px;
+  background-color: #2d2013;
+  border: #2d2013;
+  cursor: pointer;
+  padding: 1px;
+  border-right: 1px solid #8b8b8b;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.meal-row button:hover {
+  border: 2px outset #def;
+  color: #121212;
+  background-color: #f8f8f8 !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.highlighted {
+  background-color: yellow;
+}

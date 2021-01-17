@@ -3,19 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.8.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "history": "^5.0.0",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.8",
+    "react": "^16.0.1",
+    "react-dom": "^16.0.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "redux": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint-f": "npx eslint . --fix",
+    "stylelint-f": "npx stylelint **/*.{css,scss} --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +49,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.x",
+    "enzyme": "^3.11.0",
+    "eslint": "7.11.x",
+    "eslint-config-airbnb": "18.1.x",
+    "eslint-plugin-import": "2.22.x",
+    "eslint-plugin-jsx-a11y": "6.2.x",
+    "eslint-plugin-react": "7.20.x",
+    "eslint-plugin-react-hooks": "2.5.x",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x"
   }
 }

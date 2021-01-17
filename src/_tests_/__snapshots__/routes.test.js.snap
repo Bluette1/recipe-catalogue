@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`routes using array of routers should show App component for /search route 1`] = `[Function]`;
+
+exports[`routes using array of routers should show MealDetails component  for /details route 1`] = `[Function]`;
+
+exports[`routes using array of routers should show NotFound component for any route that is not defined 1`] = `[Function]`;

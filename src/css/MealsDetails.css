@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Mountains+of+Christmas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Milonga&family=Mountains+of+Christmas&display=swap');
+
+.image.details-pg {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.image-area.details-pg {
+  height: 300px;
+  width: 300px;
+}
+
+.instructions {
+  font-family: 'Milonga', cursive;
+}
+
+.meal-row.details-pg {
+  height: 100px;
+}
+
+.meal-row.ins {
+  height: 500px;
+}
+
+.ins-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body-ins {
+  font-family: 'Milonga', cursive;
+}
+
+.details-bg {
+  background-color: #000;
+}
