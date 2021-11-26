@@ -22,7 +22,7 @@ A simple recipe catalogue application built using React and Redux.
 - Redux
 
 ## Live Demo link
-[Recipe Catalogue on heroku](https://recipe-catalogue.netlify.app/)
+[Recipe Catalogue on Netlify](https://recipe-catalogue.netlify.app/)
 
 ## Getting Started
 
