@@ -3,6 +3,7 @@
 
 ![Test with jest](https://github.com/Bluette1/recipe-catalogue/workflows/Test%20with%20jest/badge.svg)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5c89393a-41c7-499f-8614-d3a8b60b82ff/deploy-status)](https://app.netlify.com/sites/recipe-catalogue/deploys)
 
 This project is a capstone project at the end of the Microverse React and Redux curriculum. The project's specifications are listed [here](https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5).
 
@@ -21,7 +22,7 @@ A simple recipe catalogue application built using React and Redux.
 - Redux
 
 ## Live Demo link
-[Recipe Catalogue on heroku](https://recipe-catalog-app.herokuapp.com/)
+[Recipe Catalogue on heroku](https://recipe-catalogue.netlify.app/)
 
 ## Getting Started
 
