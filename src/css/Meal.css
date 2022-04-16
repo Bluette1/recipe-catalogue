@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie&family=Milonga&family=Mountains+of+Christmas&display=swap');
 
 .meal-row {
-  height: 170px;
+  height: 200px;
   padding: 32px 119px 26px 27px;
   margin-top: 40px;
   display: flex;
@@ -32,7 +32,7 @@
 
 .title {
   width: 197px;
-  height: 29px;
+  height: 58px;
   margin: 3px 323px 0 0;
   font-family: 'Elsie', cursive;
   font-size: 22px;
@@ -107,4 +107,17 @@ a {
 
 .highlighted {
   background-color: yellow;
+} 
+
+@media (max-width: 1250px) {
+  .meal-row {
+    display: block;
+    height: fit-content;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .meal-row  button, .tags {
+    margin: 10px 10px 0 0;
+  }
 }

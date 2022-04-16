@@ -21,18 +21,17 @@ const CategoryFilter = ({ handleFilterChange }) => {
 
   const mealCategories = ['All', ...data];
   return (
-    <div className="category-filter">
-      <select
-        onChange={e => handleFilterChange(e.target.value)}
-      >
-        <option>CATEGORIES</option>
-        {mealCategories.map(option => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
+    <select
+      className="category-filter"
+      onChange={e => handleFilterChange(e.target.value)}
+    >
+      <option>CATEGORIES</option>
+      {mealCategories.map(option => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
   );
 };
 

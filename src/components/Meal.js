@@ -39,19 +39,15 @@ const Meal = ({
         <p className="area category">{strArea}</p>
         <h4 className="title">{strMeal}</h4>
       </div>
-      <div>
-        <div
-          className="image-area"
-          style={{
-            backgroundImage: `url(${strMealThumb})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '50% 50%',
-            backgroundSize: 'cover',
-          }}
-        >
-          {' '}
-        </div>
-      </div>
+      <div
+        className="image-area"
+        style={{
+          backgroundImage: `url(${strMealThumb})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '50% 50%',
+          backgroundSize: 'cover',
+        }}
+      />
       <div className="right">
         <h4 className="tags">
           Tags:&nbsp;

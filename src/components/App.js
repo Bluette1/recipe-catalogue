@@ -6,15 +6,13 @@ import CategoryFilter from './CategoryFilter';
 export default function App() {
   return (
     <div className="content">
-      <div className="header">
-        <ul className="mealslist-heading">
-          <li>
-            Recipe Catalogue
-          </li>
-          <a href="/"><button type="button">Meals</button></a>
-          <CategoryFilter />
-        </ul>
-      </div>
+      <ul className="mealslist-heading">
+        <li>
+          Recipe Catalogue
+        </li>
+        <li><a href="/"><button type="button">Meals</button></a></li>
+        <CategoryFilter />
+      </ul>
       <div>
         <MealsList />
       </div>
