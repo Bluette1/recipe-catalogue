@@ -47,14 +47,10 @@ body {
   letter-spacing: 1.9px;
   color: #121212;
   cursor: pointer;
-
-  /* padding: 5px; */
 }
 
 .mealslist-heading select {
   width: 140px;
-
-  /* padding-left: 3px; */
   font-weight: bold;
   background-color: #d57d1f;
 }
