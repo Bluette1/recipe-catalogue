@@ -107,20 +107,24 @@ a {
 
 .highlighted {
   background-color: yellow;
-} 
+}
 
 @media (max-width: 1250px) {
   .meal-row {
     display: block;
-    height: fit-content;
+    height: inherit;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .meal-row  button, .tags {
+  .meal-row button,
+  .tags {
     margin: 10px 10px 0 0;
   }
-  .title-category, .title, .category {
+
+  .title-category,
+  .title,
+  .category {
     width: 100%;
   }
 }
@@ -132,8 +136,7 @@ a {
   }
 }
 
-
-@media (min-width: 400px) and (max-width: 800px) {
+@media (min-width: 488px) and (max-width: 800px) {
   .image-area {
     height: 400px;
     width: unset;

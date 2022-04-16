@@ -33,15 +33,9 @@ body {
   position: relative;
 }
 
-ul {
-  display: flex;
-  list-style: none;
-}
-
 .mealslist-heading li,
 .mealslist-heading select {
   padding-right: 10px;
-  /* margin-right: 50px; */
   width: 59px;
   height: 36px;
   font-family: 'Milonga', cursive;
@@ -53,16 +47,16 @@ ul {
   letter-spacing: 1.9px;
   color: #121212;
   cursor: pointer;
+
   /* padding: 5px; */
-  
 }
 
 .mealslist-heading select {
   width: 140px;
+
   /* padding-left: 3px; */
   font-weight: bold;
   background-color: #d57d1f;
-  
 }
 
 .mealslist-heading li:first-child {
@@ -80,40 +74,20 @@ ul {
   margin: 0;
 }
 
-/* .header {
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-between;
-  padding-right: 100px;
-  padding-left: 60px;
-  border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 18px;
-  background-color: #d57d1f;
-  z-index: 100000;
-  height: 86px;
-} */
-
-
 ul {
-  /* margin-top: 5%; */
-  /* display: flex; */
   justify-content: space-between;
   padding-right: 100px;
   padding-left: 60px;
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 18px;
-  /* background-color: #d57d1f; */
   z-index: 100000;
   height: 130px;
 }
-
-
 
 .content {
   background-color: #000;
   padding-top: 45px;
 }
-
 
 .content button {
   width: 160px;
@@ -140,8 +114,7 @@ ul {
     display: block;
   }
 
-  ul li{
+  ul li {
     margin-top: 15px;
   }
-  
- }
+}
