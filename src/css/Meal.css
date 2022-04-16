@@ -120,4 +120,22 @@ a {
   .meal-row  button, .tags {
     margin: 10px 10px 0 0;
   }
+  .title-category, .title, .category {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1250px) {
+  .image-area {
+    width: unset;
+    height: 600px;
+  }
+}
+
+
+@media (min-width: 400px) and (max-width: 800px) {
+  .image-area {
+    height: 400px;
+    width: unset;
+  }
 }
