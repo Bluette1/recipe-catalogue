@@ -71,6 +71,7 @@ body {
 }
 
 ul {
+  display: flex;
   justify-content: space-between;
   padding-right: 100px;
   padding-left: 60px;

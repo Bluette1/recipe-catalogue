@@ -136,7 +136,7 @@ a {
   }
 }
 
-@media (min-width: 488px) and (max-width: 800px) {
+@media (min-width: 488px) and (max-width: 900px) {
   .image-area {
     height: 400px;
     width: unset;
