@@ -12,7 +12,7 @@ import FetchMeal from '../components/FetchMeal';
 let category;
 
 const MealsList = ({
-  meals, registerMeals, highlightMeal, hideMeal, location: { search },
+  meals, filter, registerMeals, highlightMeal, hideMeal, location: { search },
 }) => {
   const [renderRes, setRenderRes] = useState(false);
   useEffect(() => {
@@ -49,7 +49,10 @@ const MealsList = ({
             &nbsp;
             {category}
             &nbsp;
-            that start with the selected letter.
+            that start with the letter
+            {' '}
+            {filter}
+            .
           </p>
         </div>
       )}
@@ -64,11 +67,12 @@ const MealsList = ({
 const mapStateToProps = state => {
   const { filter, meals } = state;
   const mealsFiltered = filteredMealsByAlphabet(meals, filter);
-  return { meals: mealsFiltered };
+  return { meals: mealsFiltered, filter };
 };
 
 MealsList.propTypes = {
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.string.isRequired,
   registerMeals: PropTypes.func.isRequired,
   highlightMeal: PropTypes.func.isRequired,
   hideMeal: PropTypes.func.isRequired,

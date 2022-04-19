@@ -12,7 +12,7 @@ import '../css/MealsList.css';
 let letter;
 
 const MealsList = ({
-  meals, registerMeals, highlightMeal, hideMeal, location: { search },
+  meals, filter, registerMeals, highlightMeal, hideMeal, location: { search },
 }) => {
   const [renderRes, setRenderRes] = useState(false);
   useEffect(() => {
@@ -47,9 +47,12 @@ const MealsList = ({
           <p className="no-meals">
             There are currently no recipes that begin with the letter
             &nbsp;
-            {letter}
+            {letter && letter.toUpperCase()}
             &nbsp;
-            in the selected category.
+            in the category
+            {' '}
+            {filter}
+            .
           </p>
         </div>
       )}
@@ -64,11 +67,12 @@ const MealsList = ({
 const mapStateToProps = state => {
   const { filter, meals } = state;
   const mealsFiltered = filteredMealsByCategory(meals, filter);
-  return { meals: mealsFiltered };
+  return { meals: mealsFiltered, filter };
 };
 
 MealsList.propTypes = {
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.string.isRequired,
   registerMeals: PropTypes.func.isRequired,
   highlightMeal: PropTypes.func.isRequired,
   hideMeal: PropTypes.func.isRequired,
