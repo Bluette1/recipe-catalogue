@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 import QueryString from 'query-string';
-import getMealsByFilter from '../selectors';
+import { filteredMealsByAlphabet } from '../selectors';
 import { registerMeals, highlightMeal, hideMeal } from '../actions/index';
 import '../css/MealsList.css';
 import FetchMeal from '../components/FetchMeal';
@@ -45,10 +45,11 @@ const MealsList = ({
       ) : (
         <div>
           <p className="no-meals">
-            There are currently no recipes in the selected category.
+            There are currently no recipes in the category
             &nbsp;
             {category}
-            .
+            &nbsp;
+            that start with the selected letter.
           </p>
         </div>
       )}
@@ -62,7 +63,7 @@ const MealsList = ({
 
 const mapStateToProps = state => {
   const { filter, meals } = state;
-  const mealsFiltered = getMealsByFilter(meals, filter);
+  const mealsFiltered = filteredMealsByAlphabet(meals, filter);
   return { meals: mealsFiltered };
 };
 

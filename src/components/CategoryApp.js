@@ -1,7 +1,7 @@
 import '../css/App.css';
 import React from 'react';
 import MealsList from '../containers/MealsListByCategory';
-import CategoryFilter from './CategoryFilter';
+import AlphabetFilter from './AlphabetFilter';
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
           Recipe Catalogue
         </li>
         <li><a href="/"><button type="button">Meals</button></a></li>
-        <CategoryFilter />
+        <AlphabetFilter />
       </ul>
       <div>
         <MealsList />

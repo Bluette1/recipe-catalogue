@@ -5,7 +5,7 @@ import { withRouter } from 'react-router';
 import axios from 'axios';
 import QueryString from 'query-string';
 import Meal from '../components/Meal';
-import getMealsByFilter from '../selectors';
+import { filteredMealsByCategory } from '../selectors';
 import { registerMeals, highlightMeal, hideMeal } from '../actions/index';
 import '../css/MealsList.css';
 
@@ -48,6 +48,7 @@ const MealsList = ({
             There are currently no recipes that begin with the letter
             &nbsp;
             {letter}
+            &nbsp;
             in the selected category.
           </p>
         </div>
@@ -62,7 +63,7 @@ const MealsList = ({
 
 const mapStateToProps = state => {
   const { filter, meals } = state;
-  const mealsFiltered = getMealsByFilter(meals, filter);
+  const mealsFiltered = filteredMealsByCategory(meals, filter);
   return { meals: mealsFiltered };
 };
 
