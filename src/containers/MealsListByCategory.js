@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 import QueryString from 'query-string';
-import Meal from '../components/Meal';
 import getMealsByFilter from '../selectors';
 import { registerMeals, highlightMeal, hideMeal } from '../actions/index';
 import '../css/MealsList.css';
+import FetchMeal from '../components/FetchMeal';
 
 let category;
 
@@ -41,7 +41,7 @@ const MealsList = ({
   const result = (
     <div>
       {meals && meals.length ? (
-        meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
+        meals.map(meal => <FetchMeal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
       ) : (
         <div>
           <p className="no-meals">

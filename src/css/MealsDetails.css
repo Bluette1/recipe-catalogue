@@ -36,7 +36,7 @@
   margin-top: 20px;
   border-radius: 3px;
   background-color: #2d2013;
-  border: 1px solid #fff;;
+  border: 1px solid #fff;
   cursor: pointer;
   padding: 1px;
   border-right: 1px solid #8b8b8b;
@@ -116,7 +116,7 @@
 @media (max-width: 400px) {
   .ins button {
     margin: 12px 17px 9px 59px;
-    width: 110px;
+    width: 100px;
   }
 
   .ins {
