@@ -3,7 +3,7 @@ import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { Route } from 'react-router-dom';
 import Routes from '../Routes';
-import App from '../components/App';
+import App from '../components/AlphabetApp';
 import MealDetails from '../components/MealDetails';
 import ListByAlphabet from '../layouts/ListByAlphabet';
 import NotFound from '../layouts/NotFound';

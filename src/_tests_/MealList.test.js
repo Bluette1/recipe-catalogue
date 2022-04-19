@@ -5,7 +5,7 @@ import {
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import axios from 'axios';
-import MealsList from '../containers/MealsList';
+import MealsList from '../containers/MealsListByAlphabet';
 import configureStore, { history } from '../store';
 
 jest.mock('axios');

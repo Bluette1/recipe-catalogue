@@ -9,7 +9,7 @@ import getMealsByFilter from '../selectors';
 import { registerMeals, highlightMeal, hideMeal } from '../actions/index';
 import '../css/MealsList.css';
 
-let letter;
+let category;
 
 const MealsList = ({
   meals, registerMeals, highlightMeal, hideMeal, location: { search },
@@ -21,9 +21,9 @@ const MealsList = ({
     }, 1500);
 
     const parsedParams = QueryString.parse(search);
-    const { f } = parsedParams;
-    letter = f;
-    axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${f}`)
+    const { c } = parsedParams;
+    category = c;
+    axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${c}`)
       .then(response => {
         registerMeals(response.data.meals);
       });
@@ -45,9 +45,9 @@ const MealsList = ({
       ) : (
         <div>
           <p className="no-meals">
-            There are currently no recipes that begin with the letter
+            There are currently no recipes in the selected category.
             &nbsp;
-            {letter}
+            {category}
             .
           </p>
         </div>

@@ -7,7 +7,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import axios from 'axios';
-import App from '../components/App';
+import App from '../components/AlphabetApp';
 import configureStore, { history } from '../store';
 
 configure({ adapter: new Adapter() });

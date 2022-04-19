@@ -1,6 +1,6 @@
 import '../css/App.css';
 import React from 'react';
-import MealsList from '../containers/MealsList';
+import MealsList from '../containers/MealsListByCategory';
 import CategoryFilter from './CategoryFilter';
 
 export default function App() {
