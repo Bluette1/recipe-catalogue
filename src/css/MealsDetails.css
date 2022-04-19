@@ -19,7 +19,9 @@
   padding-right: 2%;
   height: 400px;
 }
-.ins button, .header button {
+
+.ins button,
+.header button {
   font-family: 'Elsie', cursive;
   font-size: 13px;
   font-weight: 300;
@@ -49,7 +51,7 @@
   margin-right: 400px;
   margin-left: 400px;
   padding: 32px 119px 26px 27px;
-  }
+}
 
 .ins-heading {
   display: flex;
@@ -64,8 +66,7 @@
   background-color: #000;
 }
 
-
-.title-categ{
+.title-categ {
   flex-grow: 1;
   flex-basis: 100%;
 }
@@ -73,6 +74,7 @@
 .ingredients {
   flex-grow: 2;
 }
+
 .titl {
   font-family: 'Elsie', cursive;
   font-size: 22px;
@@ -84,25 +86,22 @@
   color: #121212;
 }
 
-
-@media  (max-width: 1500px) {
+@media (max-width: 1500px) {
   .details-pg {
     height: 100%;
     margin-right: 120px;
     margin-left: 120px;
   }
-
 }
 
 @media (max-width: 800px) {
-
-
   .details-pg {
     display: block;
     height: unset;
     padding: 1rem;
   }
 }
+
 @media (max-width: 601px) {
   .ins {
     height: unset;
@@ -110,24 +109,19 @@
 }
 
 @media (max-width: 500px) {
- .details-pg {
-  margin-left: 0px;
-  margin-right: 0px;
- }
-
+  .details-pg {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 400px) {
- 
-
   .ins button {
     margin: 12px 17px 9px 59px;
     width: 110px;
   }
 
   .ins {
-    padding: 0rem;
-
+    padding: 0;
   }
-  
 }
