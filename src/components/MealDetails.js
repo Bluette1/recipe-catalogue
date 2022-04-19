@@ -19,30 +19,27 @@ const MealDetails = props => {
           <a href="/"><button type="button">Back</button></a>
         </ul>
       </div>
-      {' '}
-      <div className="image details-pg">
-        <div
-          className="image-area details-pg"
-          style={{
-            backgroundImage: `url(${img})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '0% 0%',
-            backgroundSize: 'cover',
-          }}
-        />
-      </div>
-      <div className="meal-row details-pg">
-        <div className="title-category">
-          <h4 className="title">{t}</h4>
+      <div
+        className="image-area details-pg"
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '0% 0%',
+          backgroundSize: 'cover',
+        }}
+      />
+      <div className="details-pg">
+        <div className="title-categ">
+          <h4 className="titl">{t}</h4>
         </div>
-        <div>
+        <div className="ingredients">
           <h4>
             Ingredients:&nbsp;
             {i}
           </h4>
         </div>
       </div>
-      <div className="meal-row ins">
+      <div className="ins">
         <div>
           <div className="ins-heading">
             <h4 className="instructions">Instructions:</h4>
