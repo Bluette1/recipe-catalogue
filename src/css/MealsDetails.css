@@ -2,27 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie&family=Mountains+of+Christmas&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Elsie&family=Milonga&family=Mountains+of+Christmas&display=swap');
 
-.image.details-pg {
-  display: flex;
-  margin-top: 5%;
-  justify-content: center;
-}
-
 .image-area.details-pg {
   height: 300px;
   width: 300px;
+  margin: 0 auto;
 }
 
 .instructions {
   font-family: 'Milonga', cursive;
+  padding: 26px;
 }
 
-.meal-row.details-pg {
-  height: 100px;
+.ins {
+  background-color: #d57d1f;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 400px;
 }
 
-.meal-row.ins {
-  height: 500px;
+.ins button,
+.header button {
+  font-family: 'Elsie', cursive;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  width: 160px;
+  height: 33px;
+  margin-top: 20px;
+  border-radius: 3px;
+  background-color: #2d2013;
+  border: #2d2013;
+  cursor: pointer;
+  padding: 1px;
+  border-right: 1px solid #8b8b8b;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.details-pg {
+  height: 142px;
+  display: flex;
+  background-color: #d57d1f;
+  margin-right: 400px;
+  margin-left: 400px;
+  padding: 32px 119px 26px 27px;
 }
 
 .ins-heading {
@@ -36,4 +64,64 @@
 
 .details-bg {
   background-color: #000;
+}
+
+.title-categ {
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.ingredients {
+  flex-grow: 2;
+}
+
+.titl {
+  font-family: 'Elsie', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+@media (max-width: 1500px) {
+  .details-pg {
+    height: 100%;
+    margin-right: 120px;
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 800px) {
+  .details-pg {
+    display: block;
+    height: unset;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 601px) {
+  .ins {
+    height: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .details-pg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .ins button {
+    margin: 12px 17px 9px 59px;
+    width: 110px;
+  }
+
+  .ins {
+    padding: 2rem 0;
+  }
 }
