@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`routes using array of routers should show App component for /search route 1`] = `[Function]`;
+exports[`routes using array of routers should show AlphabetApp component for /search route 1`] = `[Function]`;
+
+exports[`routes using array of routers should show CategoryApp component for /filter route 1`] = `[Function]`;
+
+exports[`routes using array of routers should show ListBy component for / route 1`] = `[Function]`;
 
 exports[`routes using array of routers should show MealDetails component  for /details route 1`] = `[Function]`;
 

@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders CategoryApp with expected component - test with enzyme 1`] = `ReactWrapper {}`;
+
+exports[`renders CategoryApp with home button component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="content"
+      >
+        <ul
+          class="mealslist-heading"
+        >
+          <li>
+            Recipe Catalogue
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              <button
+                type="button"
+              >
+                Meals
+              </button>
+            </a>
+          </li>
+          <select
+            class="category-filter"
+          >
+            <option>
+              SEARCH BY
+            </option>
+            <option
+              value="All"
+            >
+              All
+            </option>
+            <option
+              value="A"
+            >
+              A
+            </option>
+            <option
+              value="B"
+            >
+              B
+            </option>
+            <option
+              value="C"
+            >
+              C
+            </option>
+            <option
+              value="D"
+            >
+              D
+            </option>
+            <option
+              value="E"
+            >
+              E
+            </option>
+            <option
+              value="F"
+            >
+              F
+            </option>
+            <option
+              value="G"
+            >
+              G
+            </option>
+            <option
+              value="H"
+            >
+              H
+            </option>
+            <option
+              value="I"
+            >
+              I
+            </option>
+            <option
+              value="J"
+            >
+              J
+            </option>
+            <option
+              value="L"
+            >
+              L
+            </option>
+            <option
+              value="M"
+            >
+              M
+            </option>
+            <option
+              value="N"
+            >
+              N
+            </option>
+            <option
+              value="O"
+            >
+              O
+            </option>
+            <option
+              value="P"
+            >
+              P
+            </option>
+            <option
+              value="R"
+            >
+              R
+            </option>
+            <option
+              value="S"
+            >
+              S
+            </option>
+            <option
+              value="T"
+            >
+              T
+            </option>
+            <option
+              value="U"
+            >
+              U
+            </option>
+            <option
+              value="V"
+            >
+              V
+            </option>
+            <option
+              value="W"
+            >
+              W
+            </option>
+            <option
+              value="X"
+            >
+              X
+            </option>
+            <option
+              value="Y"
+            >
+              Y
+            </option>
+            <option
+              value="Z"
+            >
+              Z
+            </option>
+          </select>
+        </ul>
+        <div>
+          <div />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="content"
+    >
+      <ul
+        class="mealslist-heading"
+      >
+        <li>
+          Recipe Catalogue
+        </li>
+        <li>
+          <a
+            href="/"
+          >
+            <button
+              type="button"
+            >
+              Meals
+            </button>
+          </a>
+        </li>
+        <select
+          class="category-filter"
+        >
+          <option>
+            SEARCH BY
+          </option>
+          <option
+            value="All"
+          >
+            All
+          </option>
+          <option
+            value="A"
+          >
+            A
+          </option>
+          <option
+            value="B"
+          >
+            B
+          </option>
+          <option
+            value="C"
+          >
+            C
+          </option>
+          <option
+            value="D"
+          >
+            D
+          </option>
+          <option
+            value="E"
+          >
+            E
+          </option>
+          <option
+            value="F"
+          >
+            F
+          </option>
+          <option
+            value="G"
+          >
+            G
+          </option>
+          <option
+            value="H"
+          >
+            H
+          </option>
+          <option
+            value="I"
+          >
+            I
+          </option>
+          <option
+            value="J"
+          >
+            J
+          </option>
+          <option
+            value="L"
+          >
+            L
+          </option>
+          <option
+            value="M"
+          >
+            M
+          </option>
+          <option
+            value="N"
+          >
+            N
+          </option>
+          <option
+            value="O"
+          >
+            O
+          </option>
+          <option
+            value="P"
+          >
+            P
+          </option>
+          <option
+            value="R"
+          >
+            R
+          </option>
+          <option
+            value="S"
+          >
+            S
+          </option>
+          <option
+            value="T"
+          >
+            T
+          </option>
+          <option
+            value="U"
+          >
+            U
+          </option>
+          <option
+            value="V"
+          >
+            V
+          </option>
+          <option
+            value="W"
+          >
+            W
+          </option>
+          <option
+            value="X"
+          >
+            X
+          </option>
+          <option
+            value="Y"
+          >
+            Y
+          </option>
+          <option
+            value="Z"
+          >
+            Z
+          </option>
+        </select>
+      </ul>
+      <div>
+        <div />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

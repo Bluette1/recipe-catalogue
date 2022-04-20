@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders app with home button component 1`] = `
+exports[`renders AlphabetApp with expected component -test with enzyme 1`] = `ReactWrapper {}`;
+
+exports[`renders AlphabetApp with home button component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -8,15 +10,13 @@ Object {
       <div
         class="content"
       >
-        <div
-          class="header"
+        <ul
+          class="mealslist-heading"
         >
-          <ul
-            class="mealslist-heading"
-          >
-            <li>
-              Recipe Catalogue
-            </li>
+          <li>
+            Recipe Catalogue
+          </li>
+          <li>
             <a
               href="/"
             >
@@ -26,22 +26,20 @@ Object {
                 Meals
               </button>
             </a>
-            <div
-              class="category-filter"
+          </li>
+          <select
+            class="category-filter"
+          >
+            <option>
+              CATEGORIES
+            </option>
+            <option
+              value="All"
             >
-              <select>
-                <option>
-                  CATEGORIES
-                </option>
-                <option
-                  value="All"
-                >
-                  All
-                </option>
-              </select>
-            </div>
-          </ul>
-        </div>
+              All
+            </option>
+          </select>
+        </ul>
         <div>
           <div />
         </div>
@@ -52,15 +50,13 @@ Object {
     <div
       class="content"
     >
-      <div
-        class="header"
+      <ul
+        class="mealslist-heading"
       >
-        <ul
-          class="mealslist-heading"
-        >
-          <li>
-            Recipe Catalogue
-          </li>
+        <li>
+          Recipe Catalogue
+        </li>
+        <li>
           <a
             href="/"
           >
@@ -70,22 +66,20 @@ Object {
               Meals
             </button>
           </a>
-          <div
-            class="category-filter"
+        </li>
+        <select
+          class="category-filter"
+        >
+          <option>
+            CATEGORIES
+          </option>
+          <option
+            value="All"
           >
-            <select>
-              <option>
-                CATEGORIES
-              </option>
-              <option
-                value="All"
-              >
-                All
-              </option>
-            </select>
-          </div>
-        </ul>
-      </div>
+            All
+          </option>
+        </select>
+      </ul>
       <div>
         <div />
       </div>
@@ -144,5 +138,3 @@ Object {
   "unmount": [Function],
 }
 `;
-
-exports[`renders the app with expected component -test with enzyme 1`] = `ReactWrapper {}`;
