@@ -16,7 +16,7 @@ const MealDetails = props => {
           <li>
             Recipe catalogue
           </li>
-          <a href="/"><button type="button">Back</button></a>
+          <a href="/"><button data-testid="homeLink" type="button">Back</button></a>
         </ul>
       </div>
       <div
@@ -43,7 +43,7 @@ const MealDetails = props => {
         <div>
           <div className="ins-heading">
             <h4 className="instructions">Instructions:</h4>
-            <a href={y}><button type="button">Youtube Video</button></a>
+            <a href={y}><button data-testid="youtubeLink" type="button">Youtube Video</button></a>
           </div>
           <p className="body-ins">{ins}</p>
         </div>
