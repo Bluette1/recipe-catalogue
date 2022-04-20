@@ -15,12 +15,18 @@ configure({ adapter: new Adapter() });
 afterEach(cleanup);
 
 const store = configureStore();
+const title = 'title';
+const ingredients = 'ingredients';
+const youtubeLink = 'youtubeLink';
+const instructions = 'instructions';
+
+const search = `img=imgUrl&t=${title}&i=${ingredients}&y=${youtubeLink}&ins=${instructions}`;
 
 const MealWithStore = () => (
   <Provider store={store}>
     <React.StrictMode>
       <ConnectedRouter history={history}>
-        <MealDetails location={{ search: 'img=imgUrl&t=title&i=ingredients&y=youtubeLink&ins=instructuctions' }} />
+        <MealDetails location={{ search }} />
       </ConnectedRouter>
     </React.StrictMode>
   </Provider>
@@ -31,11 +37,14 @@ it('renders the Meal component', () => {
   const mealTitle = rendered.getByText('Instructions:');
   expect(mealTitle).toBeInTheDocument();
 
-  const mealCategory = rendered.getByText('Ingredients: ingredients');
+  const mealCategory = rendered.getByText(`Ingredients: ${ingredients}`);
   expect(mealCategory).toBeInTheDocument();
 
-  const streetArea = rendered.getByText('title');
-  expect(streetArea).toBeInTheDocument();
+  const titl = rendered.getByText(title);
+  expect(titl).toBeInTheDocument();
+
+  const instruct = rendered.getByText(instructions);
+  expect(instruct).toBeInTheDocument();
   expect(rendered).toMatchSnapshot();
 });
 
