@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  render, screen, cleanup, fireEvent, waitFor,
+  render, screen, cleanup, fireEvent, waitFor, act,
 } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
@@ -9,6 +9,9 @@ import MealsList from '../containers/MealsListByAlphabet';
 import configureStore, { history } from '../store';
 
 jest.mock('axios');
+
+jest.useFakeTimers();
+jest.spyOn(global, 'setTimeout');
 
 afterEach(cleanup);
 
@@ -37,7 +40,11 @@ it('renders the MealList component', async () => {
   axios.get.mockResolvedValue({
     data: { meals },
   });
-  const rendered = render(<MealsListWithStore />);
+  let rendered;
+  act(() => {
+    rendered = render(<MealsListWithStore />);
+  });
+
   await waitFor(() => {
     setTimeout(() => {
       const mealTitle = rendered.getByText('Mealia');
@@ -52,46 +59,18 @@ it('renders the MealList component', async () => {
       const tags = rendered.getByText('Tags: dessert, British');
       expect(tags).toBeInTheDocument();
       expect(rendered).toMatchSnapshot();
-    }, 1500);
-  });
-});
 
-test('renders MealList component with the expected button elements', async () => {
-  const meals = [{
-    idMeal: '2',
-    strMeal: 'Mealia',
-    strCategory: 'Dessert',
-    strMealThumb: 'image-url',
-    strTags: 'dessert, British',
-    strArea: 'British',
-    strYoutube: 'Youtube url',
-    strInstructions: 'How to Cook Mealia',
-    strIngredient1: 'corn',
-    strMeasure1: '1 cup',
-  }];
-  axios.get.mockResolvedValue({
-    data: { meals },
-  });
-  const rendered = render(<MealsListWithStore />);
-  await waitFor(() => {
-    setTimeout(() => {
       const detailsButton = rendered.getByText('View details');
       fireEvent.click(detailsButton);
       expect(detailsButton).toBeDefined();
-
       const highlightButton = rendered.getByText('Highlight meal');
       fireEvent.click(highlightButton);
       expect(highlightButton).toBeDefined();
       expect(screen.findAllByRole('button')).toBeDefined();
-
       const hideButton = rendered.getByText('Hide from list');
       fireEvent.click(hideButton);
       expect(hideButton).toBeDefined();
-
-      const streetArea = rendered.getByText('British');
-      expect(streetArea).toBeInTheDocument();
-
-      expect(rendered).toMatchSnapshot();
     }, 1500);
   });
+  jest.runAllTimers();
 });

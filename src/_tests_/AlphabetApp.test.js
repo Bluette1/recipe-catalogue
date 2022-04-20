@@ -61,9 +61,6 @@ it('renders AlphabetApp with home button component', async () => {
 });
 
 it('renders AlphabetApp with expected component -test with enzyme', async () => {
-  axios.get.mockResolvedValue({
-    data: { meals: [] },
-  });
   axios.get.mockImplementation(url => {
     switch (url) {
       case 'https://www.themealdb.com/api/json/v1/1/categories.php':

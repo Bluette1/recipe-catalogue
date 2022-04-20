@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  render, screen, cleanup, fireEvent, act, waitFor,
+  render, screen, cleanup, fireEvent, waitFor,
 } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { configure, mount } from 'enzyme';
@@ -26,8 +27,11 @@ const AppWithStore = () => (
   </Provider>
 );
 test('renders CategoryApp', async () => {
-  axios.get.mockImplementation(() => Promise.resolve({ data: {meals: []} }));
-  render(<AppWithStore />);
+  axios.get.mockImplementation(() => Promise.resolve({ data: { meals: [] } }));
+
+  await act(async () => {
+    render(<AppWithStore />);
+  });
   await waitFor(() => {
     const catalogueTitle = screen.getByText(/Recipe Catalogue/i);
     expect(catalogueTitle).toBeInTheDocument();
@@ -37,10 +41,14 @@ test('renders CategoryApp', async () => {
 });
 
 it('renders CategoryApp with home button component', async () => {
-  axios.get.mockImplementation(() => Promise.resolve({ data: {meals: []} }));
+  axios.get.mockImplementation(() => Promise.resolve({ data: { meals: [] } }));
 
   const div = document.createElement('div');
-  const rendered = render(<AppWithStore />, div);
+  let rendered;
+  await act(async () => {
+    rendered = render(<AppWithStore />, div);
+  });
+
   await waitFor(() => {
     const homeButton = rendered.getByText('Meals');
     fireEvent.click(homeButton);
@@ -50,10 +58,10 @@ it('renders CategoryApp with home button component', async () => {
 });
 
 it('renders CategoryApp with expected component - test with enzyme', async () => {
-  axios.get.mockImplementation(() => Promise.resolve({ data: {meals: []} }));
+  axios.get.mockImplementation(() => Promise.resolve({ data: { meals: [] } }));
 
   let app;
-  act(() => {
+  await act(async () => {
     app = mount(<AppWithStore />);
   });
   await waitFor(() => {
