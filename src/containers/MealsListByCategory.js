@@ -29,10 +29,6 @@ const MealsList = ({
     );
     return fetchedMeals;
   };
-  const getMeals = async response => {
-    const meals = await fetchMeals(response.data.meals);
-    return meals;
-  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,9 +40,7 @@ const MealsList = ({
     category = c;
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${c}`)
       .then(response => {
-        getMeals(response).then(fetchedMeals => {
-          registerMeals(fetchedMeals);
-        });
+        fetchMeals(response.data.meals).then(fetchedMeals => registerMeals(fetchedMeals));
       });
     return () => clearTimeout(timer);
   }, []);
