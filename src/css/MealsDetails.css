@@ -66,11 +66,12 @@
 
 .title-categ {
   flex-grow: 1;
-  flex-basis: 100%;
+  padding: 2%;
 }
 
 .ingredients {
   flex-grow: 2;
+  padding: 2%;
 }
 
 .titl {
