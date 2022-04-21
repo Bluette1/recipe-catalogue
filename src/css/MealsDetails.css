@@ -17,7 +17,7 @@
   background-color: #d57d1f;
   padding-left: 2%;
   padding-right: 2%;
-  height: 400px;
+  height: 600px;
 }
 
 .ins button,
@@ -98,12 +98,6 @@
     display: block;
     height: unset;
     padding: 1rem;
-  }
-}
-
-@media (max-width: 601px) {
-  .ins {
-    height: unset;
   }
 }
 
