@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/ListByAlphabet.css';
+import '../css/ListBy.css';
 
 const ListBy = () => (
   <div className="list-by-alphabet">

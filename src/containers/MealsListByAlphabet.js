@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import uuid from 'react-uuid';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import axios from 'axios';
@@ -41,7 +42,7 @@ const MealsList = ({
   const result = (
     <div>
       {meals && meals.length ? (
-        meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
+        meals.map(meal => <Meal key={`meal-${meal.idMeal}-${uuid()}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
       ) : (
         <div>
           <p className="no-meals">
