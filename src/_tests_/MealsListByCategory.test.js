@@ -55,57 +55,6 @@ it('renders the MealList component', async () => {
       const tags = rendered.getByText('Tags: dessert, British');
       expect(tags).toBeInTheDocument();
       expect(rendered).toMatchSnapshot();
-    }, 1500);
-  });
-  jest.runAllTimers();
-});
-
-it('renders the MealList component', async () => {
-  const id = '52772';
-  const fetchedMeals = [{
-    idMeal: '1',
-    strMeal: 'Mealia',
-    strCategory: 'Dessert',
-    strMealThumb: 'image-url',
-    strTags: 'dessert, British',
-    strArea: 'British',
-    strYoutube: 'Youtube url',
-    strInstructions: 'How to Cook Mealia',
-    strIngredient1: 'corn',
-    strMeasure1: '1 cup',
-  }];
-
-  const meals = [{
-    strMeal: 'Baked salmon with fennel & tomatoes',
-    strMealThumb: 'https://www.themealdb.com/images/media/meals/1548772327.jpg',
-    idMeal: id,
-  }];
-
-  axios.get.mockImplementation(url => {
-    switch (url) {
-      case `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`:
-        return Promise.resolve({ data: { meals: fetchedMeals } });
-      default:
-        return Promise.resolve({ data: { meals } });
-    }
-  });
-
-  const rendered = render(<MealsListWithStore />);
-  await waitFor(() => {
-    setTimeout(() => {
-      const mealTitle = rendered.getByText('Mealia');
-      expect(mealTitle).toBeInTheDocument();
-
-      const mealCategory = rendered.getByText('Dessert');
-      expect(mealCategory).toBeInTheDocument();
-
-      const streetArea = rendered.getByText('British');
-      expect(streetArea).toBeInTheDocument();
-
-      const tags = rendered.getByText('Tags: dessert, British');
-      expect(tags).toBeInTheDocument();
-      expect(rendered).toMatchSnapshot();
-
       const detailsButton = rendered.getAllByText('View details')[0];
       fireEvent.click(detailsButton);
       expect(detailsButton).toBeDefined();
@@ -118,7 +67,7 @@ it('renders the MealList component', async () => {
       const hideButton = rendered.getAllByText('Hide from list')[0];
       fireEvent.click(hideButton);
       expect(hideButton).toBeDefined();
-    }, 5000);
+    }, 1500);
   });
   jest.runAllTimers();
 });

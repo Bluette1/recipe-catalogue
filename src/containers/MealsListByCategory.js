@@ -34,7 +34,7 @@ const MealsList = ({
     return meals;
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       setRenderRes(true);
     }, 1500);
