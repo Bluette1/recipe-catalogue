@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Meal Details component with the link to the home [age] 1`] = `ReactWrapper {}`;
+
+exports[`renders the Meal Details component with the link to the youtube video 1`] = `ReactWrapper {}`;
+
+exports[`renders the Meal component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="details-bg"
+      >
+        <div
+          class="header"
+        >
+          <ul
+            class="mealslist-heading"
+          >
+            <li>
+              Recipe catalogue
+            </li>
+            <a
+              href="/"
+            >
+              <button
+                data-testid="homeLink"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </ul>
+        </div>
+        <div
+          class="image-area details-pg"
+          style="background-image: url(imgUrl); background-repeat: no-repeat; background-position: 0% 0%; background-size: cover;"
+        />
+        <div
+          class="details-pg"
+        >
+          <div
+            class="title-categ"
+          >
+            <h4
+              class="titl"
+            >
+              title
+            </h4>
+          </div>
+          <div
+            class="ingredients"
+          >
+            <h4>
+              Ingredients: 
+              ingredients
+            </h4>
+          </div>
+        </div>
+        <div
+          class="ins"
+        >
+          <div>
+            <div
+              class="ins-heading"
+            >
+              <h4
+                class="instructions"
+              >
+                Instructions:
+              </h4>
+              <a
+                href="youtubeLink"
+              >
+                <button
+                  data-testid="youtubeLink"
+                  type="button"
+                >
+                  Youtube Video
+                </button>
+              </a>
+            </div>
+            <p
+              class="body-ins"
+            >
+              instructions
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="details-bg"
+    >
+      <div
+        class="header"
+      >
+        <ul
+          class="mealslist-heading"
+        >
+          <li>
+            Recipe catalogue
+          </li>
+          <a
+            href="/"
+          >
+            <button
+              data-testid="homeLink"
+              type="button"
+            >
+              Back
+            </button>
+          </a>
+        </ul>
+      </div>
+      <div
+        class="image-area details-pg"
+        style="background-image: url(imgUrl); background-repeat: no-repeat; background-position: 0% 0%; background-size: cover;"
+      />
+      <div
+        class="details-pg"
+      >
+        <div
+          class="title-categ"
+        >
+          <h4
+            class="titl"
+          >
+            title
+          </h4>
+        </div>
+        <div
+          class="ingredients"
+        >
+          <h4>
+            Ingredients: 
+            ingredients
+          </h4>
+        </div>
+      </div>
+      <div
+        class="ins"
+      >
+        <div>
+          <div
+            class="ins-heading"
+          >
+            <h4
+              class="instructions"
+            >
+              Instructions:
+            </h4>
+            <a
+              href="youtubeLink"
+            >
+              <button
+                data-testid="youtubeLink"
+                type="button"
+              >
+                Youtube Video
+              </button>
+            </a>
+          </div>
+          <p
+            class="body-ins"
+          >
+            instructions
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`renders the Meal component with the correct buttons 1`] = `ReactWrapper {}`;

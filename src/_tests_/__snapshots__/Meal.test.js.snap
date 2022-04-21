@@ -27,14 +27,10 @@ Object {
             Mealia
           </h4>
         </div>
-        <div>
-          <div
-            class="image-area"
-            style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
-          >
-             
-          </div>
-        </div>
+        <div
+          class="image-area"
+          style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+        />
         <div
           class="right"
         >
@@ -94,14 +90,10 @@ Object {
           Mealia
         </h4>
       </div>
-      <div>
-        <div
-          class="image-area"
-          style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
-        >
-           
-        </div>
-      </div>
+      <div
+        class="image-area"
+        style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+      />
       <div
         class="right"
       >
@@ -218,14 +210,10 @@ Object {
             Mealia
           </h4>
         </div>
-        <div>
-          <div
-            class="image-area"
-            style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
-          >
-             
-          </div>
-        </div>
+        <div
+          class="image-area"
+          style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+        />
         <div
           class="right"
         >
@@ -285,14 +273,10 @@ Object {
           Mealia
         </h4>
       </div>
-      <div>
-        <div
-          class="image-area"
-          style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
-        >
-           
-        </div>
-      </div>
+      <div
+        class="image-area"
+        style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+      />
       <div
         class="right"
       >
@@ -409,14 +393,10 @@ Object {
             Mealia
           </h4>
         </div>
-        <div>
-          <div
-            class="image-area"
-            style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
-          >
-             
-          </div>
-        </div>
+        <div
+          class="image-area"
+          style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+        />
         <div
           class="right"
         >
@@ -476,14 +456,10 @@ Object {
           Mealia
         </h4>
       </div>
-      <div>
-        <div
-          class="image-area"
-          style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
-        >
-           
-        </div>
-      </div>
+      <div
+        class="image-area"
+        style="background-image: url(image-url); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+      />
       <div
         class="right"
       >

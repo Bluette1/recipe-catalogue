@@ -1,13 +1,14 @@
 import React from 'react';
 import {
-  render, screen, cleanup, fireEvent, act, waitFor,
+  render, screen, cleanup, fireEvent, waitFor,
 } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import axios from 'axios';
-import App from '../components/App';
+import App from '../components/CategoryApp';
 import configureStore, { history } from '../store';
 
 configure({ adapter: new Adapter() });
@@ -25,33 +26,29 @@ const AppWithStore = () => (
     </React.StrictMode>
   </Provider>
 );
-test('renders the app', async () => {
-  axios.get.mockImplementation(url => {
-    switch (url) {
-      case 'https://www.themealdb.com/api/json/v1/1/categories.php':
-        return Promise.resolve({ data: { categories: [] } });
-      default:
-        return Promise.resolve({ data: { meals: [] } });
-    }
+test('renders CategoryApp', async () => {
+  axios.get.mockImplementation(() => Promise.resolve({ data: { meals: [] } }));
+
+  await act(async () => {
+    render(<AppWithStore />);
   });
-  render(<AppWithStore />);
   await waitFor(() => {
     const catalogueTitle = screen.getByText(/Recipe Catalogue/i);
     expect(catalogueTitle).toBeInTheDocument();
+    const filter = screen.getByText(/search by/i);
+    expect(filter).toBeInTheDocument();
   });
 });
 
-it('renders app with home button component', async () => {
-  axios.get.mockImplementation(url => {
-    switch (url) {
-      case 'https://www.themealdb.com/api/json/v1/1/categories.php':
-        return Promise.resolve({ data: { categories: [] } });
-      default:
-        return Promise.resolve({ data: { meals: [] } });
-    }
-  });
+it('renders CategoryApp with home button component', async () => {
+  axios.get.mockImplementation(() => Promise.resolve({ data: { meals: [] } }));
+
   const div = document.createElement('div');
-  const rendered = render(<AppWithStore />, div);
+  let rendered;
+  await act(async () => {
+    rendered = render(<AppWithStore />, div);
+  });
+
   await waitFor(() => {
     const homeButton = rendered.getByText('Meals');
     fireEvent.click(homeButton);
@@ -60,20 +57,11 @@ it('renders app with home button component', async () => {
   });
 });
 
-it('renders the app with expected component -test with enzyme', async () => {
-  axios.get.mockResolvedValue({
-    data: { meals: [] },
-  });
-  axios.get.mockImplementation(url => {
-    switch (url) {
-      case 'https://www.themealdb.com/api/json/v1/1/categories.php':
-        return Promise.resolve({ data: { categories: [] } });
-      default:
-        return Promise.resolve({ data: { meals: [] } });
-    }
-  });
+it('renders CategoryApp with expected component - test with enzyme', async () => {
+  axios.get.mockImplementation(() => Promise.resolve({ data: { meals: [] } }));
+
   let app;
-  act(() => {
+  await act(async () => {
     app = mount(<AppWithStore />);
   });
   await waitFor(() => {

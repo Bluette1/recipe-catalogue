@@ -17,7 +17,7 @@
   background-color: #d57d1f;
   padding-left: 2%;
   padding-right: 2%;
-  height: 400px;
+  height: 600px;
 }
 
 .ins button,
@@ -36,12 +36,10 @@
   margin-top: 20px;
   border-radius: 3px;
   background-color: #2d2013;
-  border: #2d2013;
+  border: 1px solid #fff;
   cursor: pointer;
   padding: 1px;
   border-right: 1px solid #8b8b8b;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
 }
 
 .details-pg {
@@ -68,11 +66,12 @@
 
 .title-categ {
   flex-grow: 1;
-  flex-basis: 100%;
+  padding: 2%;
 }
 
 .ingredients {
   flex-grow: 2;
+  padding: 2%;
 }
 
 .titl {
@@ -102,12 +101,6 @@
   }
 }
 
-@media (max-width: 601px) {
-  .ins {
-    height: unset;
-  }
-}
-
 @media (max-width: 500px) {
   .details-pg {
     margin-left: 0;
@@ -118,10 +111,11 @@
 @media (max-width: 400px) {
   .ins button {
     margin: 12px 17px 9px 59px;
-    width: 110px;
+    width: 100px;
   }
 
   .ins {
     padding: 2rem 0;
+    height: 100%;
   }
 }

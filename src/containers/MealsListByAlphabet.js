@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import uuid from 'react-uuid';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 import QueryString from 'query-string';
 import Meal from '../components/Meal';
-import getMealsByFilter from '../selectors';
+import { filteredMealsByCategory } from '../selectors';
 import { registerMeals, highlightMeal, hideMeal } from '../actions/index';
 import '../css/MealsList.css';
 
 let letter;
 
 const MealsList = ({
-  meals, registerMeals, highlightMeal, hideMeal, location: { search },
+  meals, filter, registerMeals, highlightMeal, hideMeal, location: { search },
 }) => {
   const [renderRes, setRenderRes] = useState(false);
   useEffect(() => {
@@ -41,13 +42,17 @@ const MealsList = ({
   const result = (
     <div>
       {meals && meals.length ? (
-        meals.map(meal => <Meal key={`meal-${meal.idMeal}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
+        meals.map(meal => <Meal key={`meal-${meal.idMeal}-${uuid()}`} meal={meal} highlightMeal={highlightThisMeal} hideFromList={hideThisMeal} />)
       ) : (
         <div>
           <p className="no-meals">
             There are currently no recipes that begin with the letter
             &nbsp;
-            {letter}
+            {letter && letter.toUpperCase()}
+            &nbsp;
+            in the category
+            {' '}
+            {filter}
             .
           </p>
         </div>
@@ -62,12 +67,13 @@ const MealsList = ({
 
 const mapStateToProps = state => {
   const { filter, meals } = state;
-  const mealsFiltered = getMealsByFilter(meals, filter);
-  return { meals: mealsFiltered };
+  const mealsFiltered = filteredMealsByCategory(meals, filter);
+  return { meals: mealsFiltered, filter };
 };
 
 MealsList.propTypes = {
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
+  filter: PropTypes.string.isRequired,
   registerMeals: PropTypes.func.isRequired,
   highlightMeal: PropTypes.func.isRequired,
   hideMeal: PropTypes.func.isRequired,
