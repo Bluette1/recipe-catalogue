@@ -26,6 +26,8 @@ const meal = {
   strInstructions: 'How to Cook Mealia',
   strIngredient1: 'corn',
   strMeasure1: '1 cup',
+  strIngredient13: 'Egg Yolks',
+  strMeasure13: '2 free-range',
 };
 
 const hideFromListSpy = jest.fn();
@@ -67,7 +69,7 @@ it('renders the Meal component with the correct link to the meal details page', 
   const link = rendered.find('a').get(0);
 
   const detailsUrl = `/details?img=image-url&t=Mealia
-  &i=corn: 1 cup&y=Youtube url&ins=How to Cook Mealia`;
+  &i=corn: 1 cup, Egg Yolks: 2 free-range&y=Youtube url&ins=How to Cook Mealia`;
   expect(link.props.href).toBe(detailsUrl);
   expect(rendered).toMatchSnapshot();
 });
