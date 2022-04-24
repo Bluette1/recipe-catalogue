@@ -25,9 +25,7 @@ const MealsList = ({
     const { f } = parsedParams;
     letter = f;
     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${f}`)
-      .then(response => {
-        registerMeals(response.data.meals);
-      });
+      .then(response => registerMeals(response.data.meals));
     return () => clearTimeout(timer);
   }, []);
 

@@ -10,12 +10,21 @@ const Meal = ({
     strMeal, strCategory, strMealThumb, strTags, strArea, strYoutube, strInstructions, idMeal,
   } = meal;
 
+  const parseNum = str => {
+    const { length } = str;
+    let index = 1;
+    while (Number.isFinite(parseInt(str.charAt(length - index), 10))) {
+      index += 1;
+    }
+    return str.slice(-1 * (index - 1));
+  };
+
   const ingredients = () => {
     let ingredientsStr = '';
     const keys = Object.keys(meal);
     for (let idx = 0; idx < keys.length; idx += 1) {
       if (keys[idx].includes('strIngredient') && meal[keys[idx]] !== null && meal[keys[idx]] !== '') {
-        const num = keys[idx].slice(-1);
+        const num = parseNum(keys[idx]);
         ingredientsStr += `${meal[keys[idx]]}: ${meal[`strMeasure${num}`]}, `;
       }
     }
