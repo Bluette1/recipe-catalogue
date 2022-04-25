@@ -15,7 +15,7 @@ const Meal = ({
     const keys = Object.keys(meal);
     for (let idx = 0; idx < keys.length; idx += 1) {
       if (keys[idx].includes('strIngredient') && meal[keys[idx]] !== null && meal[keys[idx]] !== '') {
-        const num = keys[idx].slice(-1);
+        const num = keys[idx].substring(13);
         ingredientsStr += `${meal[keys[idx]]}: ${meal[`strMeasure${num}`]}, `;
       }
     }
